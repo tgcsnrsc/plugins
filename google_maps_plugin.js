@@ -10,8 +10,8 @@ var googleMapWidget = function (settings) {
         function initializeMap() {
             var mapOptions = {
                 zoom: 8,
-                //center: new google.maps.LatLng(35.8992, -78.8636),
-                center: new google.maps.LatLng(currentSettings.centerLatLng),
+                center: new google.maps.LatLng(35.8992, -78.8636),
+                //center: new google.maps.LatLng(currentSettings.centerLatLng),
                 disableDefaultUI: true,
                 draggable: true
             };
@@ -83,8 +83,13 @@ freeboard.loadWidgetPlugin({
             type: "text"
         },
         {
-            name: "centerLatLng",
-            display_name: "Center Latitude, Longitude",
+            name: "centerLat",
+            display_name: "Center Latitude",
+            type: "text"
+        },
+        {
+            name: "centerLng",
+            display_name: "Center Longitude",
             type: "text"
         },
         {
