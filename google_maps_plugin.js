@@ -9,8 +9,9 @@ var googleMapWidget = function (settings) {
     this.render = function (element) {
         function initializeMap() {
             var mapOptions = {
-                zoom: 4,
-                center: new google.maps.LatLng(37.235, -115.811111),
+                zoom: 8,
+                //center: new google.maps.LatLng(35.8992, -78.8636),
+                center: new google.maps.LatLng(currentSettings.centerLatLng),
                 disableDefaultUI: true,
                 draggable: true
             };
@@ -57,10 +58,10 @@ var googleMapWidget = function (settings) {
                     map: map,
                     title: "Store Number " + store
                 });
-                marker.addListener('click', function(e) {
+                //marker.addListener('click', function(e) {
                     //alert(store);
-                    window.open('http://10.89.153.3:8080/insights/freeboard/index-dev.html#access=eyJkYXNoYm9hcmQiOiI3MDEiLCJyb2xlIjoidXNlciJ9');
-                });
+                //    window.open('http://10.89.153.3:8080/insights/freeboard/index-dev.html#access=eyJkYXNoYm9hcmQiOiI3MDEiLCJyb2xlIjoidXNlciJ9');
+                //});
             }
         }
     }
@@ -73,12 +74,17 @@ var googleMapWidget = function (settings) {
 
 freeboard.loadWidgetPlugin({
     type_name: "google_map_ext",
-    display_name: "Google Map(RV)",
+    display_name: "Google Map(CS)",
     fill_size: true,
     settings: [
         {
             name: "apikey",
             display_name: "Google API Key",
+            type: "text"
+        },
+        {
+            name: "centerLatLng",
+            display_name: "Center Latitude, Longitude",
             type: "text"
         },
         {
