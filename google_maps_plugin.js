@@ -10,8 +10,8 @@ var googleMapWidget = function (settings) {
         function initializeMap() {
             var mapOptions = {
                 zoom: 8,
-                center: new google.maps.LatLng(35.8992, -78.8636),
-                //center: new google.maps.LatLng(currentSettings.centerLatLng),
+                //center: new google.maps.LatLng(35.8992, -78.8636),
+                center: new google.maps.LatLng(Number(currentSettings.centerLat), Number(currentSettings.centerLng)),
                 disableDefaultUI: true,
                 draggable: true
             };
