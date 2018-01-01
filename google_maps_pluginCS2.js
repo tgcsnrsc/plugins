@@ -77,6 +77,29 @@
             
                 for (var store in obj) {
                     let _store = obj[store];
+					if (_store.alertState == false) {
+						//Set pin color green for okay.
+						//var pinColor = "FE7569"; //problem
+						var pinColor = "33ff52"; //green okay
+						var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,	
+							new google.maps.Size(21, 34),
+							new google.maps.Point(0,0),
+							new google.maps.Point(10, 34));
+						var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+							new google.maps.Size(40, 37),
+							new google.maps.Point(0, 0),
+							new google.maps.Point(12, 35));
+						//Place the marker
+						_store.marker = new google.maps.Marker({
+                            position: {
+                                lat: Number.parseFloat(_store.latitude),
+                                lng: Number.parseFloat(_store.longitude)
+                            },
+                            map: map,
+                            title: "Store Number " + _store.storeNumber
+							icon: pinImage							
+                        });
+					};
                     if (_store.alertState == true) {
                         _store.marker = new google.maps.Marker({
                             position: {
@@ -91,7 +114,7 @@
                             '<div id="siteNotice">' +
                             '</div>' +
                             '<h1 id="firstHeading" class="firstHeading">Store Alert</h1>' +
-                            '<div id="bodyContent">' + _store.storeNumber + " - " + _store.description + '<br/><br/>' +
+                            '<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/><br/>' +
                             '<button onclick="__gMapsOpenDashboard(' + _store.storeNumber + ')">Open Store Dashboard</button>' +
                             '</div>';
 
