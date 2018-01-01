@@ -9,7 +9,7 @@
         this.render = function (element) {
             function initializeMap() {
                 var mapOptions = {
-                    zoom: Number(initZoom),
+                    zoom: 8,
                     //center: new google.maps.LatLng(37.235, -115.811111),
 					center: new google.maps.LatLng(Number(currentSettings.centerLat), Number(currentSettings.centerLng)),					
                     disableDefaultUI: true,
