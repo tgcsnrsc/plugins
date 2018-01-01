@@ -71,20 +71,12 @@
         this.onCalculatedValueChanged = function (settingName, newValue) {
             var obj = newValue;
             var contents = [newValue];
-            if (obj["with"] != null) { // certain versions of the dweetpro plugin wrap the response
-                obj = obj["with"];
-                if (Array.isArray(obj)) {
-                    contents = [];
-                    for (var o of obj) {
-                        if (o["content"] != null) {
-                            contents.push(o["content"]);
-                        }
-                    }
-                }
+            if (obj["content"] != null) { // certain versions of the dweetpro plugin wrap the response
+                obj = obj["content"];
             }
-            for (var content of contents) {
-                for (var store in content) {
-                    let _store = content[store];
+            
+                for (var store in obj) {
+                    let _store = obj[store];
                     if (_store.alertState == true) {
                         _store.marker = new google.maps.Marker({
                             position: {
@@ -113,7 +105,7 @@
                         });
                     }
                 }
-            }
+            
         }
 
         this.onDispose = function () {}
