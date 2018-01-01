@@ -96,7 +96,7 @@
                                 lng: Number.parseFloat(_store.longitude)
                             },
                             map: map,
-                            title: _store.retailerName + " (#" + _store.storeNumber + ")",
+                            title: _store.retailerName + " (#" + _store.storeNumber + "). No alerts.",
 							icon: pinImage							
                         });
 					};
@@ -107,7 +107,7 @@
                                 lng: Number.parseFloat(_store.longitude)
                             },
                             map: map,
-                            title: "Store Number " + _store.storeNumber
+                            title: _store.retailerName + " (#" + _store.storeNumber + ").  Click for Problem Summary."
                         });
 
                         _store.contentString = '<div id="content">' +
