@@ -96,7 +96,7 @@
                                 lng: Number.parseFloat(_store.longitude)
                             },
                             map: map,
-                            title: "Store Number " + _store.storeNumber
+                            title: _store.retailerName + " (#" + _store.storeNumber + ")",
 							icon: pinImage							
                         });
 					};
