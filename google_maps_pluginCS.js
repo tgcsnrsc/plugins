@@ -10,7 +10,6 @@ var googleMapWidget = function (settings) {
         function initializeMap() {
             var mapOptions = {
                 zoom: 8,
-                //center: new google.maps.LatLng(35.8992, -78.8636),
                 center: new google.maps.LatLng(Number(currentSettings.centerLat), Number(currentSettings.centerLng)),
                 disableDefaultUI: true,
                 draggable: true
@@ -74,7 +73,7 @@ var googleMapWidget = function (settings) {
 
 freeboard.loadWidgetPlugin({
     type_name: "google_map_ext",
-    display_name: "Google Map(CS)",
+    display_name: "Google Map(CS2)",
     fill_size: true,
     settings: [
         {
