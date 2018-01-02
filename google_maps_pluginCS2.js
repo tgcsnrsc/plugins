@@ -9,7 +9,7 @@
         this.render = function (element) {
             function initializeMap() {
                 var mapOptions = {
-                    zoom: 8,
+                    zoom: Number(currentSettings.initZoom),
 					center: new google.maps.LatLng(Number(currentSettings.centerLat), Number(currentSettings.centerLng)),					
                     disableDefaultUI: true,
                     draggable: true
