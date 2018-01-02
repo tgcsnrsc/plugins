@@ -10,7 +10,7 @@
             function initializeMap() {
                 var mapOptions = {
                     zoom: Number(currentSettings.initZoom),
-					center: new google.maps.LatLng(Number(currentSettings.centerLat), Number(currentSettings.centerLng)),					
+					center: new google.maps.LatLng(Number.parseFloat(currentSettings.centerLat), Number.parseFloat(currentSettings.centerLng)),					
                     disableDefaultUI: true,
                     draggable: true
                 };
