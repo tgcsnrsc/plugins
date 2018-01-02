@@ -114,7 +114,7 @@
                             '<div id="siteNotice">' +
                             '</div>' +
                             '<h1 id="firstHeading" class="firstHeading">Store Alert</h1>' +
-                            '<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/><br/>' +
+                            '<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/>' + _store.problemSummary + '<br/>' +
                             '<button onclick="__gMapsOpenDashboard(' + _store.storeNumber + ')">Open Store Dashboard</button>' +
                             '</div>';
 
