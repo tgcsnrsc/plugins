@@ -137,7 +137,7 @@
     };
 
     freeboard.loadWidgetPlugin({
-        type_name: "google_map_ext",
+        type_name: "google_map_ext_CS2",
         display_name: "Google Map CS2",
         fill_size: true,
         settings: [{
