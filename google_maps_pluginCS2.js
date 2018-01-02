@@ -110,14 +110,26 @@
                             title: _store.retailerName + " (#" + _store.storeNumber + ").  Click for Problem Summary."
                         });
 
-                        _store.contentString = '<div id="content">' +
-                            '<div id="siteNotice">' +
-                            '</div>' +
-                            '<h1 id="firstHeading" class="firstHeading">Store Alert</h1>' +
-                            '<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/><strong>' + _store.problemSummary + '</strong><br/><br/>' +
-                            '<button onclick="__gMapsOpenDashboard(' + _store.storeNumber + ')">Open Store Dashboard</button>' +
-                            '</div>';
+						if(_store.storeDashboardAvailable == true) {
+							_store.contentString = '<div id="content">' +
+								'<div id="siteNotice">' +
+								'</div>' +
+								'<h1 id="firstHeading" class="firstHeading">Store Alert</h1>' +
+								'<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/><strong>' + _store.problemSummary + '</strong><br/><br/>' +
+								'<button onclick="__gMapsOpenDashboard(' + _store.storeNumber + ')">Open Store Dashboard</button>' +
+								'</div>';
+						}
 
+						if(_store.storeDashboardAvailable == false) {
+							_store.contentString = '<div id="content">' +
+								'<div id="siteNotice">' +
+								'</div>' +
+								'<h1 id="firstHeading" class="firstHeading">Store Alert</h1>' +
+								'<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/><strong>' + _store.problemSummary + '</strong><br/><br/>' 
+								+	'No Store Dashboard Available.</div>';
+						}
+						
+						
                         _store.infowindow = new google.maps.InfoWindow({
                             content: _store.contentString
                         });
