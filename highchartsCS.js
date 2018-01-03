@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 function styleHighcharts() {
   /**
    * Dark theme for Highcharts JS
-   * @author Torstein Honsi
+   * @author Cody Shive
    */
 
   Highcharts.theme = {
@@ -612,4 +611,3 @@ freeboard.loadWidgetPlugin({
     newInstanceCallback(new highchartsCSWidget(settings));
   }
 });
->>>>>>> 1a085cf3aae3222b8f0ec2fac5d248efeebdac74
