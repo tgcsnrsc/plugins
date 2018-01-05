@@ -2,6 +2,7 @@ function styleHighchartsCS() {
   /**
    * Dark theme for Highcharts JS
    * @author Torstein Honsi
+   * Mods by Cody Shive
    */
 
   Highcharts.setOptions({
@@ -21,7 +22,7 @@ function styleHighchartsCS() {
               [1, '#3e3e40']
            ]
         },
-		width: 400,
+		width: currentSettings.chartWidth,
         style: {
            fontFamily: "sans-serif"
         },
@@ -67,7 +68,7 @@ function styleHighchartsCS() {
         lineColor: '#707073',
         minorGridLineColor: '#505053',
         tickColor: '#707073',
-        tickWidth: 2,
+        tickWidth: 1,
         title: {
            style: {
               color: '#A0A0A3'
