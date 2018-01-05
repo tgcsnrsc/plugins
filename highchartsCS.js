@@ -22,7 +22,6 @@ function styleHighchartsCS() {
               [1, '#3e3e40']
            ]
         },
-		width: currentSettings.chartWidth,
         style: {
            fontFamily: "sans-serif"
         },
