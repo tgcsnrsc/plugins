@@ -1,4 +1,4 @@
-function styleHighcharts() {
+function styleHighchartsCS() {
   /**
    * Dark theme for Highcharts JS
    * @author Torstein Honsi
@@ -223,7 +223,7 @@ var highchartsCSWidget = function (settings) {
   //var chartHeight = 300;
   //var chartWidth = 300;
 
-  styleHighcharts();
+  styleHighchartsCS();
 
   // called once (or after settings change)
   this.render = function (element) {
