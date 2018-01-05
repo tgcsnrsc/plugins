@@ -66,7 +66,7 @@ function styleHighcharts() {
         lineColor: '#707073',
         minorGridLineColor: '#505053',
         tickColor: '#707073',
-        tickWidth: 1,
+        tickWidth: 2,
         title: {
            style: {
               color: '#A0A0A3'
@@ -219,8 +219,8 @@ var highchartsCSWidget = function (settings) {
   var htmlElement;
   var data;
   var options;
-  var chartHeight = 300;
-  var chartWidth = 400;
+  //var chartHeight = 300;
+  //var chartWidth = 300;
 
   styleHighcharts();
 
