@@ -220,7 +220,7 @@ var highchartsCSWidget = function (settings) {
   var data;
   var options;
   var chartHeight = 300;
-  var chartWidth = 300;
+  var chartWidth = 400;
 
   styleHighcharts();
 
