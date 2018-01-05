@@ -21,6 +21,7 @@ function styleHighcharts() {
               [1, '#3e3e40']
            ]
         },
+		width: 400,
         style: {
            fontFamily: "sans-serif"
         },
@@ -290,7 +291,7 @@ freeboard.loadWidgetPlugin({
     },
     {
       "name": "chartWidth",
-      "display_name": "Chart Widgth (px)",
+      "display_name": "Chart Width (px)",
       "type": "number",
       "default_value": 300,
       "description": "chart width in pixels"
