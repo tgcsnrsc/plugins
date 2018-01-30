@@ -15,7 +15,6 @@ window.dyngaugeCSID = 0;
             min_value: 0,
             max_value: 0,
             level_colors: ['#f45b5b', '#f9c802', '#a9d70b', '#55BF3B'],
-			width_height: 'width:400px; height:320px',
         };
 
         var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" style="' + currentValues.width_height + '"</div>');		
@@ -123,7 +122,7 @@ window.dyngaugeCSID = 0;
                 name: "width_height",
                 display_name: "Width and Height",
                 type: "text",
-                default_value: "return 'width:400px; height:320px'"
+                default_value: "return 'width:200px; height:120px'"
             }
         ],
         newInstance: function (settings, newInstanceCallback) {
