@@ -3,9 +3,9 @@ window.dyngaugeCSID = 0;
     var dynamicGaugeWidget = function (settings) {
         var self = this;
         var thisDynGaugeCSID = "dyngaugeCS-" + window.dyngaugeID++;
-        //var titleElement = $('<h2 class="section-title"></h2>');
-		var titleElement = $('<h5 class="section-title"></h5>');
-        var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" class="200x160px"></div>');
+        var titleElement = $('<h2 class="section-title"></h2>');
+        //var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" class="200x160px"></div>');
+        var gaugeElement = $('<div id="' + thisDynGaugeCSID + '"</div>');		
 
         var gaugeObject;
         var rendered = false;
