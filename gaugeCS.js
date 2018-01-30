@@ -2,14 +2,15 @@ window.dyngaugeCSID = 0;
 (function() {
     var dynamicGaugeWidget = function (settings) {
         var self = this;
+		var currentSettings = settings;
         var thisDynGaugeCSID = "dyngaugeCS-" + window.dyngaugeID++;
         var titleElement = $('<h2 class="section-title"></h2>');
+		var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" style="' + currentValues.width_height + '"</div>');		
         //var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" class="200x160px"></div>');
 
         var gaugeObject;
         var rendered = false;
 
-        var currentSettings = settings;
         var currentValues = {
             value: 0,
             min_value: 0,
@@ -17,7 +18,6 @@ window.dyngaugeCSID = 0;
             level_colors: ['#f45b5b', '#f9c802', '#a9d70b', '#55BF3B'],
         };
 
-        var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" style="' + currentValues.width_height + '"</div>');		
 		
         function createGauge() {
             if (!rendered) {
@@ -122,7 +122,7 @@ window.dyngaugeCSID = 0;
                 name: "width_height",
                 display_name: "Width and Height",
                 type: "text",
-                default_value: "return 'width:200px; height:120px'"
+                default_value: "width:200px; height:120px"
             }
         ],
         newInstance: function (settings, newInstanceCallback) {
