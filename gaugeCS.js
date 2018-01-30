@@ -5,7 +5,7 @@ window.dyngaugeCSID = 0;
         var thisDynGaugeCSID = "dyngaugeCS-" + window.dyngaugeID++;
         var titleElement = $('<h2 class="section-title"></h2>');
         //var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" class="200x160px"></div>');
-        var gaugeElement = $('<div id="' + thisDynGaugeCSID + '"</div>');		
+        var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" style="width:100px; height:80px"</div>');		
 
         var gaugeObject;
         var rendered = false;
