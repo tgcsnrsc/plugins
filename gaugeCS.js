@@ -5,7 +5,7 @@ window.dyngaugeCSID = 0;
 		var currentSettings = settings;
         var thisDynGaugeCSID = "dyngaugeCS-" + window.dyngaugeID++;
         var titleElement = $('<h2 class="section-title"></h2>');
-		var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" style="' + currentValues.width_height + '"</div>');		
+		var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" style="' + currentValues.w_width + 'px; ' + currentValues.w_height + 'px"></div>');		
         //var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" class="200x160px"></div>');
 
         var gaugeObject;
@@ -119,10 +119,16 @@ window.dyngaugeCSID = 0;
                 default_value: "return ['#f45b5b', '#f9c802', '#a9d70b', '#55BF3B']"
             },
 			{
-                name: "width_height",
-                display_name: "Width and Height",
+                name: "w_width",
+                display_name: "Widget Width in px (e.g. 200)",
                 type: "text",
-                default_value: "width:200px; height:120px"
+                default_value: "200"
+            },
+			{
+                name: "w_height",
+                display_name: "Widget Height in px (e.g. 120)",
+                type: "text",
+                default_value: "120"
             }
         ],
         newInstance: function (settings, newInstanceCallback) {
