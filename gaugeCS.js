@@ -17,7 +17,7 @@ window.dyngaugeCSID = 0;
             max_value: 0,
             level_colors: ['#f45b5b', '#f9c802', '#a9d70b', '#55BF3B'],
 			w_width: 200,
-			w_height: 121
+			w_height: 121,
         };
 
 		var gaugeElement = $('<div id="' + thisDynGaugeCSID + '" style="width:' + currentValues.w_width + 'px; height:' + currentValues.w_height + 'px"></div>');		
