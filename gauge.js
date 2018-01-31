@@ -1,4 +1,4 @@
-window.dyngaugeID = 0;
+//window.dyngaugeID = 0;
 (function() {
     var dynamicGaugeWidget = function (settings) {
         var self = this;
