@@ -116,8 +116,8 @@
 							_store.contentString = '<div id="content">' +
 								'<div id="siteNotice">' +
 								'</div>' +
-								'<h1 id="firstHeading" class="firstHeading">Store Alert</h1>' +
-								'<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/><strong>' + _store.problemSummary + '</strong><br/><br/>' 
+								'<h1 style="color:red;">Store Alert</h1>' +
+								'<div id="bodyContent" style="color:black;">' + _store.storeNumber + " - " + _store.retailerName + '<br/><strong>' + _store.problemSummary + '</strong><br/><br/>' 
 								+	'No Store Dashboard Available.</div>';
 						}
 						
