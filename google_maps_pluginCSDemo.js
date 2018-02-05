@@ -106,7 +106,7 @@
 							_store.contentString = '<div id="content">' +
 								'<div id="siteNotice">' +
 								'</div>' +
-								'<h1 id="firstHeading" class="firstHeading" <font color="red" size="2">Store Alert</h1>' +
+								'<h1 style="color:blue;">Store Alert</h1>' +
 								'<div id="bodyContent">' + _store.storeNumber + " - " + _store.retailerName + '<br/><strong>' + _store.problemSummary + '</strong><br/><br/>' +
 								'<button onclick="__gMapsOpenDashboard(' + _store.storeNumber + ')">Open Store Dashboard</button>' +
 								'</div>';
