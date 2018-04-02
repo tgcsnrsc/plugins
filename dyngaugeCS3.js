@@ -1,4 +1,4 @@
-window.dyngaugeCS3ID = 0;
+window.dyngaugeCS3ID = 0; 
 (function() {    
         var DynamicGaugeCS3Widget = function (settings) {
         var self = this;
