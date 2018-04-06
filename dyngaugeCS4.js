@@ -1,5 +1,5 @@
 //DynGauge v4
-//2018
+//2018.04.06
 window.dyngaugeID = 0;
 (function() {
     var dynamicGaugeV4Widget = function (settings) {
