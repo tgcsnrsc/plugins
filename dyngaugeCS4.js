@@ -1,10 +1,10 @@
-//window.dyngaugeID = 0;
 //DynGauge v4
 //2018
+window.dyngaugeID = 0;
 (function() {
-    var dynamicGaugeWidget = function (settings) {
+    var dynamicGaugeV4Widget = function (settings) {
         var self = this;
-        var thisDynGaugeID = "dyngauge-" + window.dyngaugeID++;
+        var thisDynGaugeID = "dyngaugeV4-" + window.dyngaugeID++;
         var titleElement = $('<h2 class="section-title"></h2>');
         var gaugeElement = $('<div id="' + thisDynGaugeID + '"></div>');
 
@@ -79,7 +79,7 @@
 
     freeboard.loadWidgetPlugin({
         type_name: "dyngauge",
-        display_name: "DynamicGaugeV4",
+        display_name: "dynamicGaugeV4",
         "external_scripts" : [
             "/freeboard-ui/plugins/thirdparty/raphael.2.1.0.min.js",
             "/freeboard-ui/plugins/thirdparty/justgage.1.0.1.js"
@@ -120,7 +120,7 @@
             }
         ],
         newInstance: function (settings, newInstanceCallback) {
-            newInstanceCallback(new dynamicGaugeWidget(settings));
+            newInstanceCallback(new dynamicGaugeV4Widget(settings));
         }
     });
 
