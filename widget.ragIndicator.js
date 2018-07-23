@@ -114,7 +114,7 @@
         type_name: "ragIndicator",
         display_name: "RAG Indicator",
 		external_scripts: [
-			"plugins/thirdparty/jquery.keyframes.min.js"
+			"https://tgcsnrsc.github.io/plugins/jquery.keyframes.min.js"
 		],
         settings: [
             {
