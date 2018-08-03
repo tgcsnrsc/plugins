@@ -1,16 +1,15 @@
-//DynGauge v5
-//2018.04.06
-window.dyngaugeIDv5 = 1;
 (function() {
+	//Toshiba Global Solutions, Inc.
+	//Cody Shive
+	//DynGauge v5
+	//2018.08.03
     var dynamicGaugeV5Widget = function (settings) {
         var self = this;
         var thisdyngaugeIDv5 = "dyngaugeV5-" + window.dyngaugeIDv5++;
         var titleElement = $('<h2 class="section-title"></h2>');
         var gaugeElement = $('<div id="' + thisdyngaugeIDv5 + '"></div>');
-
-        var gaugeObject;
+        var gaugeObjectv5;
         var rendered = false;
-
         var currentSettings = settings;
         var currentValues = {
             value: 0,
@@ -19,14 +18,14 @@ window.dyngaugeIDv5 = 1;
             level_colors: ['#f45b5b', '#f9c802', '#a9d70b', '#55BF3B'],
         };
 
-        function createGauge() {
+        function createGaugev5() {
             if (!rendered) {
                 return;
             }
 
             gaugeElement.empty();
 
-            gaugeObject = new JustGage({
+            gaugeObjectv5 = new JustGage({
                 id: thisdyngaugeIDv5,
                 value: currentValues.value,
                 min: currentValues.min_value,
@@ -41,13 +40,13 @@ window.dyngaugeIDv5 = 1;
         this.render = function (element) {
             rendered = true;
             $(element).append(titleElement).append($('<div class="gauge-widget-wrapper"></div>').append(gaugeElement));
-            createGauge();
+            createGaugev5();
         }
 
         this.onSettingsChanged = function (newSettings) {
             if (newSettings.units != currentSettings.units) {
                 currentSettings = newSettings;
-                createGauge();
+                createGaugev5();
             }
             else {
                 currentSettings = newSettings;
@@ -58,11 +57,11 @@ window.dyngaugeIDv5 = 1;
 
         this.onCalculatedValueChanged = function (settingName, newValue) {
             currentValues[settingName] = newValue;
-            if (!_.isUndefined(gaugeObject)) {
+            if (!_.isUndefined(gaugeObjectv5)) {
                 if (settingName == 'value') {
-                    gaugeObject.refresh(Number(newValue));
+                    gaugeObjectv5.refresh(Number(newValue));
                 } else {
-                    createGauge();
+                    createGaugev5();
                 }
             }
         }
