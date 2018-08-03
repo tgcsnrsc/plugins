@@ -1,3 +1,4 @@
+window.dyngaugeIDv5 = 0;
 (function() {
 	//Toshiba Global Solutions, Inc.
 	//Cody Shive
