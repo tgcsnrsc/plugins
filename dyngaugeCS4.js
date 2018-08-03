@@ -1,6 +1,6 @@
 //DynGauge v4
 //2018.04.06
-window.dyngaugeID = 0;
+window.dyngaugeID = 1;
 (function() {
     var dynamicGaugeV4Widget = function (settings) {
         var self = this;
