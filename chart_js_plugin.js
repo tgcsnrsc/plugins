@@ -35,7 +35,7 @@
         data: {
           labels: newValue[currentSettings['dataXSeries']],
           datasets: [{ 
-              data: newValue[currentSettings['data']],
+              data: newValue[currentSettings['plotdata']],
               borderColor: "#3e95cd",
               label: currentSettings['dataSetTitle'],
               fill: false
@@ -76,7 +76,7 @@
         "description": "dom element id of the chart (must be unique for multiple charts)"
       },        
       {
-        "name": "data",
+        "name": "plotdata",
         "display_name": "Chart Data Source",
         "type": "calculated",
         "description": "The data to plot"
