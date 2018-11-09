@@ -35,7 +35,7 @@
         data: {
           labels: newValue[currentSettings['dataXSeries']],
           datasets: [{ 
-              data: newValue[currentSettings['dataYSeries']],
+              data: newValue[currentSettings['data']],
               borderColor: "#3e95cd",
               label: currentSettings['dataSetTitle'],
               fill: false
