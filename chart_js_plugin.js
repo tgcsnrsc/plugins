@@ -60,7 +60,7 @@
 					display: true,
 					text: 'Daily Sales ($M)',
 					fontColor: 'white',
-					fontSize: 14
+					fontSize: 18
 			},
 			legend: {
 					display: true,
