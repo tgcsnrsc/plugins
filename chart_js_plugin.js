@@ -71,7 +71,7 @@
 						ticks: {
 							fontColor: "white",
 							fontSize: 12,
-							stepSize: 10,
+							stepSize: 25,
 							beginAtZero: true
 						},
 						gridLines: {
@@ -83,7 +83,7 @@
 						ticks: {
 							fontColor: "white",
 							fontSize: 12,
-							stepSize: 10,
+							stepSize: 25,
 							beginAtZero: true
 						},
 						gridLines: {
