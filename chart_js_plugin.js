@@ -68,7 +68,7 @@
 					labels: {
 						fontColor: "white",
 						boxWidth: 2,
-						padding: 2
+						padding: 20
 					}
 			},
 			scales: {
