@@ -37,9 +37,27 @@
 			datasets: [
 				{
 				label: "Trash",
-				data: [65, 59, 66, 70, 56, 55, 40]
-				}
+				data: [65, 59, 66, 70, 56, 55, 40],
+				borderColor: "red",
+				fill: false
+				},
+				{
+				label: "Not Trash",
+				data: [44, 77, 66, 88, 55, 66, 70],
+				borderColor: "yellow",
+				fill: false
+				}				
 			]
+		},
+		options: {
+			title: {
+					display: true,
+					text: 'Moolah'
+			},
+			legend: {
+					display: true
+			}
+
 		}
 	  });
 	}
