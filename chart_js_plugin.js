@@ -37,7 +37,8 @@
 		labels: ["January", "February", "March", "April", "May", "June", "July"],
 		datasets: [
 		  {
-			label: "My First dataset",
+			label: "Trash",
+			backgroundColor: "rgba(0,0,0,0.2)",
 			fillColor: "rgba(255,255,255,0.2)",
 			strokeColor: "rgba(240, 25, 29,1)",
 			pointColor: "rgba(25, 240, 132,1)",
