@@ -65,7 +65,11 @@
 			legend: {
 					display: true,
 					position: 'bottom',
-					fontColor: "white"
+					labels: {
+						fontColor: "white",
+						boxWidth: 2,
+						padding: 2
+					}
 			},
 			scales: {
 					yAxes: [{
