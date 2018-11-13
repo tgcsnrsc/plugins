@@ -38,6 +38,14 @@
 		datasets: [
 		  {
 			label: "Trash",
+			data: ["65", "59", "66", "70", "56", "55", "40"]
+		  }
+		]
+		}
+	  });
+	}
+			
+/*
 			backgroundColor: "rgba(0,0,0,0.2)",
 			fillColor: "rgba(255,255,255,0.2)",
 			strokeColor: "rgba(240, 25, 29,1)",
@@ -45,14 +53,7 @@
 			pointStrokeColor: "yellow",
 			pointHighlightFill: "red",
 			pointHighlightStroke: "rgba(51, 25, 240,1)",
-			data: ["65", "59", "80", "81", "56", "55", "40"]
-		  }
-		]
-		}
-	  });
-	}
-			
-
+*/
 
 /*
  data: {
