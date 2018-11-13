@@ -58,12 +58,16 @@
 					display: true,
 					fontColor: "white"
 			},
+			gridLines: {
+					display: true,
+					color: "white"
+			},	
 			scales: {
 					yAxes: [{
 						ticks: {
 							fontColor: "white",
 							fontSize: 18,
-							stepSize: 1,
+							stepSize: 20,
 							beginAtZero: true
 						}
 					}],
@@ -71,7 +75,7 @@
 						ticks: {
 							fontColor: "white",
 							fontSize: 14,
-							stepSize: 1,
+							stepSize: 20,
 							beginAtZero: true
 						}
 					}]
