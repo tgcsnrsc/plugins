@@ -17,8 +17,8 @@
       //add external css
       
       //add the chart div to the dom
-      //var chartDiv = '<canvas id="'+currentSettings.id + '" width="'+currentSettings.chartWidth+'" height="'+currentSettings.chartHeight+'"></canvas>';
-	  var chartDiv = '<canvas id="Chart1" width="600px" height="200px"></canvas>';
+      var chartDiv = '<canvas id="'+currentSettings.id + '" width="'+currentSettings.chartWidth+'" height="'+currentSettings.chartHeight+'"></canvas>';
+	  //var chartDiv = '<canvas id="Chart1" width="600px" height="200px"></canvas>';
 	  //var chartDiv = '<canvas id="Chart1" width=600 height=300"></canvas>';
       console.log(chartDiv);
       htmlElement = $(chartDiv);
