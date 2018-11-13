@@ -85,7 +85,8 @@
 						},
 						scaleLabel: {
 								display: true,
-								labelString: 'Daily Sales $M'
+								labelString: 'Daily Sales $M',
+								fontColor: "white"
 						}
 					}],
 					xAxes: [{
@@ -100,8 +101,9 @@
 								color: "gray"
 						},
 						scaleLabel: {
-								display: true,
-								labelString: 'Sales'
+								display: false,
+								labelString: 'Sales',
+								fontColor: "white"
 						}
 					}]
 			}
