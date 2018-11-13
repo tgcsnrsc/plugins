@@ -40,10 +40,10 @@
 			label: "My First dataset",
 			fillColor: "rgba(255,255,255,0.2)",
 			strokeColor: "rgba(240, 25, 29,1)",
-			pointColor: "rgba(220,220,220,1)",
-			pointStrokeColor: "#fff",
-			pointHighlightFill: "#fff",
-			pointHighlightStroke: "rgba(220,220,220,1)",
+			pointColor: "rgba(25, 240, 132,1)",
+			pointStrokeColor: "yellow",
+			pointHighlightFill: "red",
+			pointHighlightStroke: "rgba(51, 25, 240,1)",
 			data: ["65", "59", "80", "81", "56", "55", "40"]
 		  }
 		]
