@@ -40,12 +40,14 @@
 			datasets: [
 				{
 				label: "Trash",
+				fontColor: 'white',
 				data: [65, 59, 66, 70, 56, 55, 40],
-				borderColor: "red",
+				borderColor: "turquoise",
 				fill: false
 				},
 				{
 				label: "Not Trash",
+				fontColor: 'white',				
 				data: [44, 77, 66, 88, 55, 66, 70],
 				borderColor: "yellow",
 				fill: false
@@ -56,7 +58,9 @@
 			responsive: false,
 			title: {
 					display: true,
-					text: 'Moolah'
+					text: 'Daily Sales ($M)',
+					fontColor: 'white',
+					fontSize: 14
 			},
 			legend: {
 					display: true,
