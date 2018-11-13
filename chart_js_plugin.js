@@ -7,8 +7,8 @@
     var htmlElement;
     var data;
     var options;
-    var chartHeight = currentSettings.chartHeight;
-    var chartWidth = currentSettings.chartWidth;
+    var chartHeight = 300 //currentSettings.chartHeight;
+    var chartWidth = 600 //currentSettings.chartWidth;
 
     //seems to be called once (or after settings change)
     this.render = function (element) {
@@ -55,9 +55,27 @@
 					text: 'Moolah'
 			},
 			legend: {
-					display: true
+					display: true,
+					fontColor: "white"
+			},
+			scales: {
+					yAxes: [{
+						ticks: {
+							fontColor: "white",
+							fontSize: 18,
+							stepSize: 1,
+							beginAtZero: true
+						}
+					}],
+					xAxes: [{
+						ticks: {
+							fontColor: "white",
+							fontSize: 14,
+							stepSize: 1,
+							beginAtZero: true
+						}
+					}]
 			}
-
 		}
 	  });
 	}
