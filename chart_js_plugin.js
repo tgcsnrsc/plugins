@@ -32,15 +32,14 @@
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
-
-			data: {
-		labels: ["January", "February", "March", "April", "May", "June", "July"],
-		datasets: [
-		  {
-			label: "Trash",
-			data: ["65", "59", "66", "70", "56", "55", "40"]
-		  }
-		]
+		data: {
+			labels: ["January", "February", "March", "April", "May", "June", "July"],
+			datasets: [
+				{
+				label: "Trash",
+				data: [65, 59, 66, 70, 56, 55, 40]
+				}
+			]
 		}
 	  });
 	}
