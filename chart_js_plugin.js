@@ -64,6 +64,7 @@
 			},
 			legend: {
 					display: true,
+					position: 'bottom',
 					fontColor: "white"
 			},
 			scales: {
@@ -76,7 +77,11 @@
 						},
 						gridLines: {
 								display: true,
-								color: "white"
+								color: "gray"
+						},
+						scaleLabel: {
+								display: true,
+								labelString: 'Daily Sales $M'
 						}
 					}],
 					xAxes: [{
@@ -88,7 +93,11 @@
 						},
 						gridLines: {
 								display: true,
-								color: "white"
+								color: "gray"
+						},
+						scaleLabel: {
+								display: true,
+								labelString: 'Sales'
 						}
 					}]
 			}
