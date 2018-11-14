@@ -170,7 +170,7 @@
       {
         "name": "plotData",
         "display_name": "Chart Data Source",
-//        "type": "calculated",
+        "type": "calculated",
         "description": "The data to plot"
       },   
       {
