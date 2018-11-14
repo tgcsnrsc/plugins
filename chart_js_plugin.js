@@ -34,6 +34,7 @@
 		console.log (xxx);
 		//var plotDatax = currentSettings.plotData.split(",");
 		//console.log (plotDatax);
+	  var trash = newValue[currentSettings['dataXSeries']];
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
