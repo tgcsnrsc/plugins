@@ -29,12 +29,6 @@
 
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
-		console.log('xxx');
-		console.log(currentSettings['dataXSeries']);
-		//var xxx = currentSettings['dataXSeries'];
-		//var xxx = newValue[currentSettings['dataXSeries']];
-		//var xxx = [currentSettings['dataXSeries']];
-		//var xxx = currentSettings.dataXSeries;
 		//var xxx = ["January", "February", "March", "April", "May", "June", "July"];
 		var xxx = currentSettings.dataXSeries.split(",");
 		console.log (xxx);
@@ -43,23 +37,16 @@
       var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
-//			labels: xxx,
 			labels: currentSettings.dataXSeries.split(","),
 			datasets: [
 				{
-				label: "Trash",
+				label: currentSettings['dataSetTitle'],
 				fontColor: 'white',
-				data: [65, 59, 66, 70, 56, 55, 40],
+//				data: [65, 59, 66, 70, 56, 55, 40],
+				data: currentSettings.plotData.split(","),
 				borderColor: "turquoise",
 				fill: false
-				},
-				{
-				label: "Not Trash",
-				fontColor: 'white',				
-				data: [44, 77, 66, 88, 55, 66, 70],
-				borderColor: "yellow",
-				fill: false
-				}				
+				}	
 			]
 		},
 		options: {
@@ -174,9 +161,9 @@
         "description": "dom element id of the chart (must be unique for multiple charts)"
       },        
       {
-        "name": "plotdata",
+        "name": "plotData",
         "display_name": "Chart Data Source",
-        "type": "calculated",
+//        "type": "calculated",
         "description": "The data to plot"
       },   
       {
