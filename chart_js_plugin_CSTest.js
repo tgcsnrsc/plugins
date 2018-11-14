@@ -1,6 +1,6 @@
 (function () {
 
-  var chartJSWidget = function (settings) {
+  var chartJSWidgetTest = function (settings) {
 
     var self = this;    
     var currentSettings = settings;
@@ -111,36 +111,6 @@
 	  });
 	}
 			
-/*
-			backgroundColor: "rgba(0,0,0,0.2)",
-			fillColor: "rgba(255,255,255,0.2)",
-			strokeColor: "rgba(240, 25, 29,1)",
-			pointColor: "rgba(25, 240, 132,1)",
-			pointStrokeColor: "yellow",
-			pointHighlightFill: "red",
-			pointHighlightStroke: "rgba(51, 25, 240,1)",
-*/
-
-/*
- data: {
-          labels: newValue[currentSettings['dataXSeries']],
-          datasets: [{ 
-              data: newValue[currentSettings['plotdata']],
-              borderColor: "#3e95cd",
-              label: currentSettings['dataSetTitle'],
-              fill: false
-            }
-          ]
-        },
-        options: {
-          title: {
-            display: false,
-            text: 'Transactions every 15 minutes'
-          }
-        }
-      });
-    }
-*/
     this.onDispose = function () {
     }
 
@@ -152,8 +122,8 @@
   };
 
   freeboard.loadWidgetPlugin({
-    "type_name": "chartJSWidget",
-    "display_name": "ChartJS",    
+    "type_name": "chartJSWidgetTest",
+    "display_name": "ChartJSTEST",    
     "fill_size": true,
     "external_scripts": [
       "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"
@@ -215,7 +185,7 @@
       }
     ],
     newInstance: function (settings, newInstanceCallback) {
-      newInstanceCallback(new chartJSWidget(settings));
+      newInstanceCallback(new chartJSWidgetTest(settings));
     }
   });
 
