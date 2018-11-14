@@ -31,7 +31,8 @@
     this.onCalculatedValueChanged = function (settingName, newValue) {
 		console.log('xxx');
 		console.log(currentSettings['dataXSeries']);
-		var xxx = currentSettings['dataXSeries'];
+		//var xxx = currentSettings['dataXSeries'];
+		var xxx = newValue[currentSettings['dataXSeries']];
 		console.log (xxx);
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
