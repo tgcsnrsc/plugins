@@ -31,11 +31,13 @@
     this.onCalculatedValueChanged = function (settingName, newValue) {
 		console.log('xxx');
 		console.log(currentSettings['dataXSeries']);
+		var xxx = currentSettings['dataXSeries'];
+		console.log (xxx);
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
-			labels: currentSettings['dataXSeries'],
+			labels: xxx,
 			datasets: [
 				{
 				label: "Trash",
