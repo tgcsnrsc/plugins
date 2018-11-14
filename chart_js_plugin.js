@@ -29,32 +29,26 @@
 
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
-		console.log ('in');
-		var xxx = currentSettings.dataXSeries.split(",");
-		console.log (xxx);
-		//var plotDatax = currentSettings.plotData.split(",");
-		//console.log (plotDatax);
+		console.log ('Calcualted Value Changed');
+		var labelsX = currentSettings.dataXSeries.split(",");
+		console.log (labelsX);
+		var plotDatax = currentSettings.plotData.split(",");
+		console.log (plotDatax);
 	  var trash = newValue[currentSettings['dataXSeries']];
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
-			labels: ["January", "February", "March", "April", "May", "June", "July"],
+			labels: labelsX,
 			datasets: [
 				{
-				label: "Trash",
+				label: currentSettings.dataSetTitle,
 				fontColor: 'white',
-				data: [65, 59, 66, 70, 56, 55, 40],
+				data: plotDatax,
+//				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
 				fill: false
-				},
-				{
-				label: "Not Trash",
-				fontColor: 'white',				
-				data: [44, 77, 66, 88, 55, 66, 70],
-				borderColor: "yellow",
-				fill: false
-				}				
+				}	
 			]
 		},
 		options: {
