@@ -38,8 +38,8 @@
 				{
                 label: currentSettings['dataSetTitle'],
 				fontColor: 'white',
-//				data: newValue[currentSettings['plotdata']],
-				data: [65, 59, 66, 70, 56, 55, 40],
+				data: currentSettings['plotdata'],
+//				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
 				fill: false
 				}
