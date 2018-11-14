@@ -29,12 +29,10 @@
 
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
-		//var xxx = ["January", "February", "March", "April", "May", "June", "July"];
 		var xxx = currentSettings.dataXSeries.split(",");
 		console.log (xxx);
-		console.log (newValue);
-		var plotData = currentSettings.plotData.split(",");
-		console.log (plotData);
+		var plotDatax = currentSettings.plotData.split(",");
+		console.log (plotDatax);
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
@@ -45,7 +43,7 @@
 				label: 'xxxx',
 				fontColor: 'white',
 //				data: [65, 59, 66, 70, 56, 55, 40],
-				data: plotData,
+				data: plotDatax,
 				borderColor: "turquoise",
 				fill: false
 				}	
