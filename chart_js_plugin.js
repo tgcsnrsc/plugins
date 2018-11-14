@@ -40,7 +40,7 @@
 			labels: currentSettings.dataXSeries.split(","),
 			datasets: [
 				{
-				label: currentSettings['dataSetTitle'],
+				label: 'xxxx',
 				fontColor: 'white',
 //				data: [65, 59, 66, 70, 56, 55, 40],
 				data: currentSettings.plotData.split(","),
