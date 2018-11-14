@@ -36,7 +36,7 @@
 		//var xxx = [currentSettings['dataXSeries']];
 		//var xxx = currentSettings.dataXSeries;
 		//var xxx = ["January", "February", "March", "April", "May", "June", "July"];
-		var xxx = currentSettings.dataXSeries.split(",");
+		var xxx = currentSettings.dataXSeries.split(",").trim();
 		console.log (xxx);
 		console.log (newValue);
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
