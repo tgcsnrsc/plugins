@@ -33,10 +33,12 @@
       var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
-			labels: newValue[currentSettings['dataXSeries']],
+//			labels: newValue[currentSettings['dataXSeries']],
+			labels: ["January", "February", "March", "April", "May", "June", "July"],
 			datasets: [
 				{
-                label: currentSettings['dataSetTitle'],
+//                label: currentSettings['dataSetTitle'],
+				label: "Trash",
 				fontColor: 'white',
 //				data: currentSettings['plotdata'],
 //				data: newValue[currentSettings['plotdata']],
