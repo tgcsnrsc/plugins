@@ -33,19 +33,22 @@
       var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
-//			labels: newValue[currentSettings['dataXSeries']],
 			labels: ["January", "February", "March", "April", "May", "June", "July"],
 			datasets: [
 				{
-//                label: currentSettings['dataSetTitle'],
 				label: "Trash",
 				fontColor: 'white',
-//				data: currentSettings['plotdata'],
-//				data: newValue[currentSettings['plotdata']],
 				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
 				fill: false
-				}
+				},
+				{
+				label: "Not Trash",
+				fontColor: 'white',				
+				data: [44, 77, 66, 88, 55, 66, 70],
+				borderColor: "yellow",
+				fill: false
+				}				
 			]
 		},
 		options: {
@@ -162,7 +165,7 @@
       {
         "name": "plotdata",
         "display_name": "Chart Data Source",
-//        "type": "calculated",
+        "type": "calculated",
         "description": "The data to plot"
       },   
       {
