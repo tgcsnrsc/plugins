@@ -29,6 +29,8 @@
 
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
+		console.log('xxx');
+		console.log(currentSettings['dataXSeries']);
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
