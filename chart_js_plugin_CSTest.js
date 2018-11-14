@@ -36,7 +36,7 @@
     this.onCalculatedValueChanged = function (settingName, newValue) {
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
 		data: {
 			labels: ["January", "February", "March", "April", "May", "June", "July"],
 			datasets: [
