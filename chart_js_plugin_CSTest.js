@@ -1,5 +1,7 @@
 (function () {
-
+//Test 
+//Cody Shive
+//TGCS
   var chartJSWidgetTest = function (settings) {
 
     var self = this;    
