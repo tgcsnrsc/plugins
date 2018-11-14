@@ -35,8 +35,9 @@
 		//var xxx = newValue[currentSettings['dataXSeries']];
 		//var xxx = [currentSettings['dataXSeries']];
 		//var xxx = currentSettings.dataXSeries;
-		var xxx = ["January", "February", "March", "April", "May", "June", "July"];
-		//console.log (xxx);
+		//var xxx = ["January", "February", "March", "April", "May", "June", "July"];
+		var xxx = [currentSettings.dataXSeries];
+		console.log (xxx);
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
