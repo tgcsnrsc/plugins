@@ -37,7 +37,7 @@
       var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
-			labels: xxx,
+			labels: [xxx],
 			datasets: [
 				{
 				label: "Trash",
