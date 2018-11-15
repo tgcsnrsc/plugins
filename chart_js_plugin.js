@@ -33,8 +33,10 @@
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
 	//var plotDatax = currentSettings.plotData.split(",");
-	var plotDatax = newValue[currentSettings['plotData']];
+		var plotDatax = JSON.parse([currentSettings['plotData']]);
 		console.log (plotDatax);
+		var plotDatay = JSON.parse(currentSettings.plotData);
+		console.log (plotDatay);
 	  var trash = newValue[currentSettings['dataXSeries']];
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
       var myChart = new Chart(ctx, {
