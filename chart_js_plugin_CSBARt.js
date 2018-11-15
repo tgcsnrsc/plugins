@@ -38,6 +38,7 @@
 		console.log(newValue[currentSettings['plotData']]);
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
+		console.log(ctx);
 		var myChart = new Chart(ctx, {
         type: 'bar',
 		data: {
