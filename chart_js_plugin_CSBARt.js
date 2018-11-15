@@ -48,6 +48,8 @@
 				fontColor: 'white',
 				data: newValue[0].data,
 				borderColor: "turquoise",
+				backgroundColor: "white",
+				fillColor: "red",
 				fill: false
 				}	
 			]
