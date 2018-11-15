@@ -39,6 +39,7 @@
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		console.log('Check for instance of Chart');
 		console.log(ctx);
+		console.log(ctx.fillStyle);
 
 		var myChart = new Chart(ctx, {
         type: 'line',
