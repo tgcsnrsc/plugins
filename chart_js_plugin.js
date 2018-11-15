@@ -30,14 +30,14 @@
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
 		console.log ('Calcualted Value Changed');
-		var labelsX = currentSettings.dataXSeries.split(",");
-		console.log (labelsX);
-
 		//debugger;
 		console.log(newValue);		
 		console.log(newValue[0]);
 		console.log(newValue[0].data);
 		console.log(newValue[0].categories);		
+		
+		console.log('Check for instance of Chart');
+		console.log(cts instanceof Chart);
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		var myChart = new Chart(ctx, {
