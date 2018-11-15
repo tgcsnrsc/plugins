@@ -38,6 +38,7 @@
 
 		debugger;
 		console.log(newValue[0]);
+		console.log("data" in newValue);
 		console.log(newValue.data);
 		/*
 		var plotz = [];
