@@ -29,17 +29,20 @@
 
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
+		if (settingName == 'plotData') {
+		  renderChart(newValue);
+		}
 		console.log ('Calcualted Value Changed');
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
-	//var plotDatax = currentSettings.plotData.split(",");
+		//var plotDatax = currentSettings.plotData.split(",");
 		var plotDatax = JSON.parse([currentSettings['plotData']]);
 		console.log (plotDatax);
 		var plotDatay = JSON.parse(currentSettings.plotData);
 		console.log (plotDatay);
-	  var trash = newValue[currentSettings['dataXSeries']];
-      var ctx = document.getElementById(currentSettings.id).getContext('2d');
-      var myChart = new Chart(ctx, {
+		var trash = newValue[currentSettings['dataXSeries']];
+		var ctx = document.getElementById(currentSettings.id).getContext('2d');
+		var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
 			labels: labelsX,
