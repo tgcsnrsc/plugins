@@ -34,7 +34,9 @@
 		console.log (labelsX);
 
 		//debugger;
+		console.log(newValue);		
 		console.log(newValue[0]);
+		console.log(newValue[1]);
 		console.log(newValue[0].data);
 		console.log(newValue[0].categories);		
 		
