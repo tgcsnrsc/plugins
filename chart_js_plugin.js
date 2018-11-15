@@ -40,23 +40,20 @@
 		//console.log (plotDatax);
 		//var plotDatay = JSON.parse(currentSettings.plotData);
 		//console.log (plotDatay);
-		var trash = newValue[currentSettings['plotData']];
-		console.log('trash:');
-		console.log(trash);
-		var trash2 = [currentSettings['plotData']];
-		console.log('trash2:');
-		console.log(trash2);
-		debugger;
+
+		//debugger;
 		var trash3 = currentSettings.plotData;
 		console.log('trash3:');		
 		console.log(trash3);
-		
+		console.log(newValue[0]);
+		/*
 		var plotz = [];
 		for (var index in currentSettings.plotData) {
 			var tagsArray = currentSettings.plotData[index].data;
 			 plotz.push(tagsArray);
 		}
 		console.log(plotz);
+		*/
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		var myChart = new Chart(ctx, {
