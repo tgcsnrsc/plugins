@@ -29,9 +29,9 @@
 
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
-		if (settingName == 'plotData') {
-		  render(newValue);
-		}
+		//if (settingName == 'plotData') {
+		//  render(newValue);
+		//}
 		console.log ('Calcualted Value Changed');
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
