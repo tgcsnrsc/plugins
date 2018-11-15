@@ -178,7 +178,7 @@
       {
         "name": "dataXSeries",
         "display_name": "Array of values for the X-series",
-        "type": "calculated",		
+ //       "type": "calculated",		
         "description": "Array of values for the X-series"
       },   
       {
