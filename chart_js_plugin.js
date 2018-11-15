@@ -46,6 +46,7 @@
 		var trash2 = [currentSettings['plotData']];
 		console.log('trash2:');
 		console.log(trash2);
+		debugger;
 		var trash3 = currentSettings.plotData;
 		console.log('trash3:');		
 		console.log(trash3);
