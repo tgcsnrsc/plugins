@@ -40,11 +40,14 @@
 		//console.log (plotDatax);
 		//var plotDatay = JSON.parse(currentSettings.plotData);
 		//console.log (plotDatay);
-		var trash = newValue[currentSettings['dataXSeries']];
+		var trash = newValue[currentSettings['plotData']];
+		console.log('trash:');
 		console.log(trash);
-		var trash2 = [currentSettings['dataXSeries']];
+		var trash2 = [currentSettings['plotData']];
+		console.log('trash2:');
 		console.log(trash2);
-		var trash3 = currentSettings.dataXSeries;
+		var trash3 = currentSettings.plotData;
+		console.log('trash3:');		
 		console.log(trash3);
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
