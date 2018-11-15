@@ -31,16 +31,16 @@
     this.onCalculatedValueChanged = function (settingName, newValue) {
 		console.log ('Calcualted Value Changed');
 		//debugger;
-		console.log(newValue);		
-		console.log(newValue[0]);
-		console.log(newValue[0].data);
-		console.log(newValue[0].categories);	
-		console.log(newValue[currentSettings['plotData']]);
+		//console.log(newValue);		
+		//console.log(newValue[0]);
+		//console.log(newValue[0].data);
+		//console.log(newValue[0].categories);	
+		//console.log(newValue[currentSettings['plotData']]);
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		console.log('Check for instance of Chart');
 		console.log(ctx);
-		console.log(ctx.fillStyle);
+		//console.log(ctx.fillStyle);
 
 		var myChart = new Chart(ctx, {
         type: 'line',
