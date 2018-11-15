@@ -33,7 +33,7 @@
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
 	//var plotDatax = currentSettings.plotData.split(",");
-	var plotDatax = [currentSettings['plotData']];
+	var plotDatax = newValue[currentSettings['plotData']];
 		console.log (plotDatax);
 	  var trash = newValue[currentSettings['dataXSeries']];
       var ctx = document.getElementById(currentSettings.id).getContext('2d');
