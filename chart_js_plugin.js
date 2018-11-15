@@ -60,7 +60,7 @@
 				label: currentSettings.dataSetTitle,
 				fontColor: 'white',
 //				data: currentSettings.plotData,
-				data: newValue[currentSettings['data']],
+				data: newValue[currentSettings['plotData'].data],
 //				data: plotDatax,
 //				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
