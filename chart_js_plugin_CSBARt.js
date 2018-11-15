@@ -48,8 +48,8 @@
 				fontColor: 'white',
 				data: newValue[0].data,
 				borderColor: "turquoise",
-				backgroundColor: "white",
-				fillColor: "red",
+				backgroundColor: currentSettings.barBackgroundColor,
+				fillColor: "white",
 				fill: false
 				}	
 			]
@@ -148,14 +148,18 @@
       },   
       {
         "name": "dataXSeries",
-        "display_name": "Array of values for the X-series",
- //       "type": "calculated",		
+        "display_name": "Array of values for the X-series",	
         "description": "Array of values for the X-series"
       },   
       {
         "name": "dataSetTitle",
         "display_name": "Title of the data set",
         "description": "Title of the data set"
+      },    
+      {
+        "name": "barBackgroundColor",
+        "display_name": "Background Color for Bars",
+        "description": "Background Color for Bars"
       },    
       {
         "name": "chartType",
