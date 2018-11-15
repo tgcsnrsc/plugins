@@ -35,11 +35,6 @@
 		console.log ('Calcualted Value Changed');
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
-		//var plotDatax = currentSettings.plotData.split(",");
-		//var plotDatax = JSON.parse(currentSettings['plotData']);
-		//console.log (plotDatax);
-		//var plotDatay = JSON.parse(currentSettings.plotData);
-		//console.log (plotDatay);
 
 		//debugger;
 		var trash3 = currentSettings.plotData;
@@ -64,8 +59,8 @@
 				{
 				label: currentSettings.dataSetTitle,
 				fontColor: 'white',
-				data: currentSettings.plotData,
-//				data: newValue[currentSettings['plotData']],
+//				data: currentSettings.plotData,
+				data: newValue[currentSettings['data']],
 //				data: plotDatax,
 //				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
