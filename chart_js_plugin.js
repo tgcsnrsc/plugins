@@ -35,7 +35,7 @@
 		console.log(newValue[0]);
 		console.log(newValue[0].data);
 		console.log(newValue[0].categories);	
-		console.log(newValue[currentSettings['dataYSeries']]);
+		console.log(newValue[currentSettings['plotData']]);
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		console.log('Check for instance of Chart');
