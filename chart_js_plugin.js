@@ -38,8 +38,7 @@
 
 		debugger;
 		console.log(newValue[0]);
-		console.log(newValue[currentSettings['plotData'].data]);
-		console.log(newValue[currentSettings['plotData']].data);
+		console.log(newValue[data]);
 		/*
 		var plotz = [];
 		for (var index in currentSettings.plotData) {
