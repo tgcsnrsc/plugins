@@ -36,11 +36,10 @@
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
 
-		//debugger;
-		var trash3 = currentSettings.plotData;
-		console.log('trash3:');		
-		console.log(trash3);
+		debugger;
 		console.log(newValue[0]);
+		console.log(newValue[currentSettings['plotData'].data]);
+		console.log(newValue[currentSettings['plotData']].data);
 		/*
 		var plotz = [];
 		for (var index in currentSettings.plotData) {
@@ -60,7 +59,7 @@
 				label: currentSettings.dataSetTitle,
 				fontColor: 'white',
 //				data: currentSettings.plotData,
-				data: newValue[currentSettings['plotData'].data],
+				data: [1,2,3],
 //				data: plotDatax,
 //				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
