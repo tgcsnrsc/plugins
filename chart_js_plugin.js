@@ -33,7 +33,7 @@
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
 
-		debugger;
+		//debugger;
 		console.log(newValue[0]);
 		console.log(newValue[0].data);
 		console.log(newValue[0].categories);		
