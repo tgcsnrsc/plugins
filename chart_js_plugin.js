@@ -36,7 +36,7 @@
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
 		//var plotDatax = currentSettings.plotData.split(",");
-		var plotDatax = JSON.parse(currentSettings['plotData']);
+		//var plotDatax = JSON.parse(currentSettings['plotData']);
 		console.log (plotDatax);
 		var plotDatay = JSON.parse(currentSettings.plotData);
 		console.log (plotDatay);
