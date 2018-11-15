@@ -36,8 +36,7 @@
 		//debugger;
 		console.log(newValue);		
 		console.log(newValue[0]);
-		console.log(newValue[1]);
-		console.log(newValue[1].data);
+		console.log(newValue[0].data);
 		console.log(newValue[0].categories);		
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
@@ -49,7 +48,7 @@
 				{
 				label: currentSettings.dataSetTitle,
 				fontColor: 'white',
-				data: newValue[1].data,
+				data: newValue[0].data,
 				borderColor: "turquoise",
 				fill: false
 				}	
