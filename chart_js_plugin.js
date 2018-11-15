@@ -58,7 +58,7 @@
 			responsive: false,
 			title: {
 					display: true,
-					text: 'Daily Sales ($M)',
+					text: newValue[0].chartTitle,
 					fontColor: 'white',
 					fontSize: 18
 			},
@@ -85,7 +85,7 @@
 						},
 						scaleLabel: {
 								display: true,
-								labelString: 'Daily Sales $M',
+								labelString: newValue[0].yScaleLabel,
 								fontColor: "white"
 						}
 					}],
