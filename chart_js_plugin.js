@@ -51,8 +51,9 @@
 		console.log(trash3);
 		
 		var plotz = [];
-		for (var i = 0; i < currentSettings.plotData.length; ++i) {
-			plotz.push([i].currentSettings.plotData);
+		for (var index in currentSettings.plotData) {
+			var tagsArray = currentSettings.plotData[index].data;
+			 plotz.push(tagsArray);
 		}
 		console.log(plotz);
 		
