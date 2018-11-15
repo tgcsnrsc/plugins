@@ -37,33 +37,20 @@
 		console.log (labelsX);
 
 		//debugger;
-		console.log(newValue);
 		console.log(newValue[0]);
-		console.log("data" in newValue[0]);
 		console.log(newValue[0].data);
-		/*
-		var plotz = [];
-		for (var index in currentSettings.plotData) {
-			var tagsArray = currentSettings.plotData[index].data;
-			 plotz.push(tagsArray);
-		}
-		console.log(plotz);
-		*/
+		console.log(newValue[0].categories);		
 		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		var myChart = new Chart(ctx, {
         type: 'line',
 		data: {
-			labels: labelsX,
+			labels: newValue[0].categories,
 			datasets: [
 				{
 				label: currentSettings.dataSetTitle,
 				fontColor: 'white',
-//				data: currentSettings.plotData,
-//				data: newValue,
 				data: newValue[0].data,
-//				data: plotDatax,
-//				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
 				fill: false
 				}	
@@ -194,6 +181,7 @@
       {
         "name": "dataXSeries",
         "display_name": "Array of values for the X-series",
+        "type": "calculated",		
         "description": "Array of values for the X-series"
       },   
       {
