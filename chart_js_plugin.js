@@ -36,7 +36,8 @@
 		var labelsX = currentSettings.dataXSeries.split(",");
 		console.log (labelsX);
 
-		debugger;
+		//debugger;
+		console.log(newValue);
 		console.log(newValue[0]);
 		console.log("data" in newValue[0]);
 		console.log(newValue[0].data);
@@ -59,7 +60,8 @@
 				label: currentSettings.dataSetTitle,
 				fontColor: 'white',
 //				data: currentSettings.plotData,
-				data: newValue[0].data,
+				data: newValue,
+//				data: newValue[0].data,
 //				data: plotDatax,
 //				data: [65, 59, 66, 70, 56, 55, 40],
 				borderColor: "turquoise",
