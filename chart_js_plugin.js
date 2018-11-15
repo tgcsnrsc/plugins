@@ -50,6 +50,12 @@
 		console.log('trash3:');		
 		console.log(trash3);
 		
+		var plotz = [];
+		for (var i = 0; i < currentSettings.plotData.length; ++i) {
+			plotz.push([i].currentSettings.plotData);
+		}
+		console.log(plotz);
+		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		var myChart = new Chart(ctx, {
         type: 'line',
