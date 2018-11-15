@@ -38,9 +38,15 @@
 		//var plotDatax = currentSettings.plotData.split(",");
 		//var plotDatax = JSON.parse(currentSettings['plotData']);
 		//console.log (plotDatax);
-		var plotDatay = JSON.parse(currentSettings.plotData);
-		console.log (plotDatay);
+		//var plotDatay = JSON.parse(currentSettings.plotData);
+		//console.log (plotDatay);
 		var trash = newValue[currentSettings['dataXSeries']];
+		console.log(trash);
+		var trash2 = [currentSettings['dataXSeries']];
+		console.log(trash2);
+		var trash3 = currentSettings.dataXSeries;
+		console.log(trash3);
+		
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
 		var myChart = new Chart(ctx, {
         type: 'line',
