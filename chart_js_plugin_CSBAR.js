@@ -107,6 +107,7 @@
       });
     } else {
       //  --- update data sets - https://www.chartjs.org/docs/latest/developers/updates.html //
+	  chartMap[currentSettings.id].update();
     }
     // rwv - end // 
 	}
