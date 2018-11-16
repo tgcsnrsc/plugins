@@ -1,5 +1,5 @@
 (function () {
-
+  var chartMap = {}; // rwv //
   var chartJSWidgetBAR = function (settings) {
 
     var self = this;    
@@ -31,77 +31,84 @@
     this.onCalculatedValueChanged = function (settingName, newValue) {
 		console.log ('Calcualted Value Changed');
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
-		var myChart = new Chart(ctx, {
-        type: 'bar',
-		data: {
-			labels: newValue[0].categories,
-			datasets: [
-				{
-				label: currentSettings.dataSetTitle,
-				fontColor: 'white',
-				data: newValue[0].data,
-				borderColor: "turquoise",
-				backgroundColor: currentSettings.barBackgroundColor,
-				fillColor: "white",
-				fill: false
-				}	
-			]
-		},
-		options: {
-			responsive: false,
-			title: {
-					display: true,
-					text: newValue[0].chartTitle,
-					fontColor: 'white',
-					fontSize: 18
-			},
-			legend: {
-					display: true,
-					position: 'bottom',
-					labels: {
-						fontColor: "white",
-						boxWidth: 2,
-						padding: 20
-					}
-			},
-			scales: {
-					yAxes: [{
-						ticks: {
-							fontColor: "white",
-							fontSize: 12,
-							stepSize: 25,
-							beginAtZero: true
-						},
-						gridLines: {
-								display: true,
-								color: "gray"
-						},
-						scaleLabel: {
-								display: true,
-								labelString: newValue[0].yScaleLabel,
-								fontColor: "white"
-						}
-					}],
-					xAxes: [{
-						ticks: {
-							fontColor: "white",
-							fontSize: 12,
-							stepSize: 25,
-							beginAtZero: true
-						},
-						gridLines: {
-								display: true,
-								color: "gray"
-						},
-						scaleLabel: {
-								display: false,
-								labelString: 'Sales',
-								fontColor: "white"
-						}
-					}]
-			}
-		}
-	  });
+  // rwv - start // 
+    var myChart = chartMap[currentSettings.id];
+    if(myChart == null) {
+      chartMap[currentSettings.id] = new Chart(ctx, {
+          type: 'bar',
+      data: {
+        labels: newValue[0].categories,
+        datasets: [
+          {
+          label: currentSettings.dataSetTitle,
+          fontColor: 'white',
+          data: newValue[0].data,
+          borderColor: "turquoise",
+          backgroundColor: currentSettings.barBackgroundColor,
+          fillColor: "white",
+          fill: false
+          }	
+        ]
+      },
+      options: {
+        responsive: false,
+        title: {
+            display: true,
+            text: newValue[0].chartTitle,
+            fontColor: 'white',
+            fontSize: 18
+        },
+        legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+              fontColor: "white",
+              boxWidth: 2,
+              padding: 20
+            }
+        },
+        scales: {
+            yAxes: [{
+              ticks: {
+                fontColor: "white",
+                fontSize: 12,
+                stepSize: 25,
+                beginAtZero: true
+              },
+              gridLines: {
+                  display: true,
+                  color: "gray"
+              },
+              scaleLabel: {
+                  display: true,
+                  labelString: newValue[0].yScaleLabel,
+                  fontColor: "white"
+              }
+            }],
+            xAxes: [{
+              ticks: {
+                fontColor: "white",
+                fontSize: 12,
+                stepSize: 25,
+                beginAtZero: true
+              },
+              gridLines: {
+                  display: true,
+                  color: "gray"
+              },
+              scaleLabel: {
+                  display: false,
+                  labelString: 'Sales',
+                  fontColor: "white"
+              }
+            }]
+        }
+      }
+      });
+    } else {
+      //  --- update data sets - https://www.chartjs.org/docs/latest/developers/updates.html //
+    }
+    // rwv - end // 
 	}
 			
     this.onDispose = function () {
