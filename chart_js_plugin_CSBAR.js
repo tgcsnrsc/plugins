@@ -1,6 +1,6 @@
 (function () {
   var chartMap = {}; // rwv //
-  var chartJSWidgetBAR = function (settings) {
+  var chartJSWidgetBARX = function (settings) {
 
     var self = this;    
     var currentSettings = settings;
@@ -122,8 +122,8 @@
   };
 
   freeboard.loadWidgetPlugin({
-    "type_name": "chartJSWidgetBAR",
-    "display_name": "ChartJSBar",    
+    "type_name": "chartJSWidgetBARX",
+    "display_name": "ChartJSBarX",    
     "fill_size": true,
     "external_scripts": [
       "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"
@@ -190,7 +190,7 @@
       }
     ],
     newInstance: function (settings, newInstanceCallback) {
-      newInstanceCallback(new chartJSWidgetBAR(settings));
+      newInstanceCallback(new chartJSWidgetBARX(settings));
     }
   });
 
