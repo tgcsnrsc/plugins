@@ -35,7 +35,7 @@
     var myChart = chartMap[currentSettings.id];
     if(myChart == null) {
       chartMap[currentSettings.id] = new Chart(ctx, {
-          type: 'bar',
+          type: 'line',
       data: {
         labels: newValue[0].categories,
         datasets: [
@@ -43,8 +43,8 @@
           label: currentSettings.dataSetTitle,
           fontColor: 'white',
           data: newValue[0].data,
-          borderColor: newValue[0].barColor,
-          backgroundColor: newValue[0].barColor,
+          borderColor: "turquoise",
+          backgroundColor: currentSettings.barBackgroundColor,
           fillColor: "white",
           fill: false
           }	
@@ -98,7 +98,7 @@
               },
               scaleLabel: {
                   display: false,
-                  labelString: newValue[0].xScaleLabel,
+                  labelString: 'Sales',
                   fontColor: "white"
               }
             }]
@@ -157,7 +157,33 @@
         "display_name": "Chart Data Source",
         "type": "calculated",
         "description": "The data to plot"
+      },   
+      {
+        "name": "dataYSeries",
+        "display_name": "Array of values for the Y-series",
+        "description": "Array of values for the Y-series"
+      },   
+      {
+        "name": "dataXSeries",
+        "display_name": "Array of values for the X-series",	
+        "description": "Array of values for the X-series"
+      },   
+      {
+        "name": "dataSetTitle",
+        "display_name": "Title of the data set",
+        "description": "Title of the data set"
       },    
+      {
+        "name": "barBackgroundColor",
+        "display_name": "Background Color for Bars",
+        "description": "Background Color for Bars"
+      },    
+      {
+        "name": "chartType",
+        "display_name": "Type of chart",
+        "default_value": "line",
+        "description": "Type of chart to render"
+      },
       {
         "name": "chartHeight",
         "display_name": "Chart Height (px)",
