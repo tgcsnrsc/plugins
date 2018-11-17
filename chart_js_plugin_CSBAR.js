@@ -106,7 +106,7 @@
       }
       });
     } else {
-		debugger;
+	  //debugger;
       //  --- update data sets - https://www.chartjs.org/docs/latest/developers/updates.html //
 	    chartMap[currentSettings.id].data = 
 		{
