@@ -106,7 +106,23 @@
       }
       });
     } else {
+		debugger;
       //  --- update data sets - https://www.chartjs.org/docs/latest/developers/updates.html //
+	    chartMap[currentSettings.id].data = 
+		{
+        labels: newValue[0].categories,
+        datasets: [
+          {
+          label: currentSettings.dataSetTitle,
+          fontColor: 'white',
+          data: newValue[0].data,
+          borderColor: "turquoise",
+          backgroundColor: currentSettings.barBackgroundColor,
+          fillColor: "white",
+          fill: false
+          }	
+        ]
+      }
 	  chartMap[currentSettings.id].update();
     }
     // rwv - end // 
