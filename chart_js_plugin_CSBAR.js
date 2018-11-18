@@ -43,8 +43,8 @@
           label: newValue[0].dataSetTitle,
           fontColor: 'white',
           data: newValue[0].data,
-          borderColor: newValue[0].barColor,
-          backgroundColor: newValue[0].barColor,
+          borderColor: newValue[0].borderColor,
+          backgroundColor: newValue[0].backgroundColor,
           fillColor: "white",
           fill: false
           }	
