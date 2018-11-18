@@ -35,7 +35,7 @@
     var myChart = chartMap[currentSettings.id];
     if(myChart == null) {
       chartMap[currentSettings.id] = new Chart(ctx, {
-          type: 'bar',
+      type: newValue[0].chartType
       data: {
         labels: newValue[0].categories,
         datasets: [
