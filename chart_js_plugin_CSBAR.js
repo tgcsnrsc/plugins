@@ -35,12 +35,12 @@
     var myChart = chartMap[currentSettings.id];
     if(myChart == null) {
       chartMap[currentSettings.id] = new Chart(ctx, {
-      type: newValue[0].chartType
+      type: newValue[0].chartType,
       data: {
         labels: newValue[0].categories,
         datasets: [
           {
-          label: currentSettings.dataSetTitle,
+          label: newValue[0].dataSetTitle,
           fontColor: 'white',
           data: newValue[0].data,
           borderColor: newValue[0].barColor,
