@@ -111,11 +111,11 @@
         labels: newValue[0].categories,
         datasets: [
           {
-          label: currentSettings.dataSetTitle,
-          fontColor: 'white',
+          label: newValue[0].dataSetTitle,
+          fontColor: newValue[0].fontColor,
           data: newValue[0].data,
-          borderColor: "turquoise",
-          backgroundColor: currentSettings.barBackgroundColor,
+          borderColor: newValue[0].borderColor,
+          backgroundColor: newValue[0].backgroundColor,
           fillColor: "white",
           fill: false
           }	
