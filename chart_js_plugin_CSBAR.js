@@ -41,7 +41,7 @@
         datasets: [
           {
           label: newValue[0].dataSetTitle,
-          fontColor: 'white',
+          fontColor: newValue[0].fontColor,
           data: newValue[0].data,
           borderColor: newValue[0].borderColor,
           backgroundColor: newValue[0].backgroundColor,
@@ -55,14 +55,13 @@
         title: {
             display: true,
             text: newValue[0].chartTitle,
-            fontColor: 'white',
+            fontColor: newValue[0].fontColor,
             fontSize: 18
         },
         legend: {
             display: true,
             position: 'bottom',
             labels: {
-              fontColor: "white",
               boxWidth: 2,
               padding: 20
             }
@@ -70,7 +69,6 @@
         scales: {
             yAxes: [{
               ticks: {
-                fontColor: "white",
                 fontSize: 12,
                 stepSize: 25,
                 beginAtZero: true
@@ -82,13 +80,13 @@
               scaleLabel: {
                   display: true,
                   labelString: newValue[0].yScaleLabel,
-                  fontColor: "white"
+                  fontColor: newValue[0].fontColor
               }
             }],
             xAxes: [{
               ticks: {
-                fontColor: "white",
-                fontSize: 12,
+				fontColor: newValue[0].fontColor,
+				fontSize: 12,
                 stepSize: 25,
                 beginAtZero: true
               },
@@ -99,7 +97,7 @@
               scaleLabel: {
                   display: false,
                   labelString: newValue[0].xScaleLabel,
-                  fontColor: "white"
+				  fontColor: newValue[0].fontColor
               }
             }]
         }
