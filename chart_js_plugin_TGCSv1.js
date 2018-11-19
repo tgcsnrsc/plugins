@@ -46,7 +46,7 @@
     this.onCalculatedValueChanged = function (settingName, newValue) {
 		console.log ('Calcualted Value Changed');
 		var ctx = document.getElementById(currentSettings.id).getContext('2d');
-  // rwv - start // 
+	// Catalog chart for knowing first time through
     var myChart = chartMap[currentSettings.id];
     if(myChart == null) {
       chartMap[currentSettings.id] = new Chart(ctx, {
