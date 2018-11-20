@@ -153,7 +153,7 @@
 
   freeboard.loadWidgetPlugin({
     "type_name": "chartJSWidgetTGCSv1",
-    "display_name": "ChartJSBarX",    
+    "display_name": "chartJSWidgetTGCSv1",    
     "fill_size": true,
     "external_scripts": [
       "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"
