@@ -89,11 +89,11 @@
                 beginAtZero: true
               },
               gridLines: {
-                  display: true,
+                  display: newValue[0].scaleGridLinesDisplay,
                   color: "gray"
               },
               scaleLabel: {
-                  display: true,
+                  display: newValue[0].yScaleLabelDisplay,
                   labelString: newValue[0].yScaleLabel,
                   fontColor: newValue[0].fontColor
               }
@@ -110,7 +110,7 @@
                   color: "gray"
               },
               scaleLabel: {
-                  display: false,
+                  display: newValue[0].xScaleLabelDisplay,
                   labelString: newValue[0].xScaleLabel,
 				  fontColor: newValue[0].fontColor
               }
