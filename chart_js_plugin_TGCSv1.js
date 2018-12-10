@@ -84,6 +84,7 @@
         scales: {
             yAxes: [{
               ticks: {
+                display: newValue[0].yTicksDisplay,				  				  
                 fontSize: 12,
                 stepSize: 25,
                 beginAtZero: true
@@ -100,6 +101,7 @@
             }],
             xAxes: [{
               ticks: {
+                display: newValue[0].xTicksDisplay,				  
 				fontColor: newValue[0].fontColor,
 				fontSize: 12,
                 stepSize: 25,
