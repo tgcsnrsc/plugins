@@ -57,7 +57,7 @@
           {
           label: newValue[0].dataSetTitle,
           fontColor: newValue[0].fontColor,
-		  tension: newValue[0].lineTensionCurvyness,
+		  lineTension: newValue[0].lineTensionCurvyness,
           data: newValue[0].data,
           borderColor: newValue[0].borderColor,
 		  borderWidth: newValue[0].borderWidth,
@@ -69,6 +69,11 @@
       },
       options: {
         responsive: false,
+		elements: {
+			line: {
+				tension: newValue[0].lineTensionCurvyness
+			}
+		},
         title: {
             display: true,
             text: newValue[0].chartTitle,
