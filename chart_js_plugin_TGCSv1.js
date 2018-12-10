@@ -78,7 +78,7 @@
             position: 'bottom',
             labels: {
               boxWidth: newValue[0].legendLabelBoxWidth,
-              padding: 20
+              padding: newValue[0].legendLabelPadding,
             }
         },
         scales: {
@@ -91,7 +91,8 @@
               },
               gridLines: {
                   display: newValue[0].yScaleGridLinesDisplay,
-                  color: "gray"
+				  drawBorder: newValue[0].yDrawBorder,
+                  color: newValue[0].yBorderColor
               },
               scaleLabel: {
                   display: newValue[0].yScaleLabelDisplay,
@@ -109,7 +110,8 @@
               },
               gridLines: {
                   display: newValue[0].xScaleGridLinesDisplay,
-                  color: "gray"
+				  drawBorder: newValue[0].xDrawBorder,
+                  color: newValue[0].yBorderColor
               },
               scaleLabel: {
                   display: newValue[0].xScaleLabelDisplay,
