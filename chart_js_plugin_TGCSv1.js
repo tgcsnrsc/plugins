@@ -77,7 +77,7 @@
             display: true,
             position: 'bottom',
             labels: {
-              boxWidth: 2,
+              boxWidth: newValue[0].legendLabelBoxWidth,
               padding: 20
             }
         },
