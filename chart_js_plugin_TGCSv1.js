@@ -59,6 +59,7 @@
           fontColor: newValue[0].fontColor,
           data: newValue[0].data,
           borderColor: newValue[0].borderColor,
+		  borderWidth: newValue[0].borderWidth,
           backgroundColor: newValue[0].backgroundColor,
           fillColor: "white",
           fill: false
