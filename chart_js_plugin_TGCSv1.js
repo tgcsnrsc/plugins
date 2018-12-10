@@ -75,7 +75,7 @@
             fontSize: 18
         },
         legend: {
-            display: true,
+            display: newValue[0].displayLegend,
             position: 'bottom',
             labels: {
               boxWidth: newValue[0].legendLabelBoxWidth,
