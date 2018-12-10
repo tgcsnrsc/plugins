@@ -79,7 +79,7 @@
             position: 'bottom',
             labels: {
               boxWidth: newValue[0].legendLabelBoxWidth,
-              padding: newValue[0].legendLabelPadding,
+              padding: newValue[0].legendLabelPadding
             }
         },
         scales: {
