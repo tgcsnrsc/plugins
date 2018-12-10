@@ -57,7 +57,7 @@
           {
           label: newValue[0].dataSetTitle,
           fontColor: newValue[0].fontColor,
-		  lineTension: newValue[0].lineTensionCurvyness,
+		  tension: newValue[0].lineTensionCurvyness,
           data: newValue[0].data,
           borderColor: newValue[0].borderColor,
 		  borderWidth: newValue[0].borderWidth,
