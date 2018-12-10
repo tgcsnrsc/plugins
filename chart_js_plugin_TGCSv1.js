@@ -87,7 +87,7 @@
               ticks: {
                 display: newValue[0].yTicksDisplay,				  				  
                 fontSize: 12,
-                stepSize: 25,
+                stepSize: newValue[0].yStepSize,
                 beginAtZero: true
               },
               gridLines: {
@@ -106,7 +106,7 @@
                 display: newValue[0].xTicksDisplay,				  
 				fontColor: newValue[0].fontColor,
 				fontSize: 12,
-                stepSize: 25,
+                stepSize: newValue[0].xStepSize,
                 beginAtZero: true
               },
               gridLines: {
