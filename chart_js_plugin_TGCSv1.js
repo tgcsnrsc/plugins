@@ -137,8 +137,8 @@
         },
 	    tooltips: {
 			callbacks: {
-				label: function(tooltipItem, chart){
-					var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+				label: function(tooltipItem, myChart){
+					var datasetLabel = myChart.datasets[tooltipItem.datasetIndex].label || '';
 					return datasetLabel + ': $ ' + number_format(tooltipItem.yLabel, 2);
 				}
 			}
