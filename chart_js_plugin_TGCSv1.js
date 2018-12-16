@@ -93,15 +93,16 @@
                 display: newValue[0].yTicksDisplay,				  				  
                 fontSize: 12,
                 stepSize: newValue[0].yStepSize,
-                beginAtZero: true,
-				userCallback: function(value, index, values) {
+                beginAtZero: true
+				//Add formatting to the Y-axis labels.
+				//userCallback: function(value, index, values) {
 					// Convert the number to a string and splite the string every 3 charaters from the end
-					value = value.toString();
-					value = value.split(/(?=(?:...)*$)/);
+					//value = value.toString();
+					//value = value.split(/(?=(?:...)*$)/);
 					// Convert the array to a string and format the output
-					value = value.join('.');
-					return '$' + value;
-				}
+					//value = value.join(',');
+					//return '$' + value;
+				//}
               },
               gridLines: {
                   display: newValue[0].yScaleGridLinesDisplay,
@@ -133,8 +134,16 @@
 				  fontColor: newValue[0].fontColor
               }
             }]
-        }
-      }
+        },
+	    tooltips: {
+			callbacks: {
+				label: function(tooltipItem, chart){
+					var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+					return datasetLabel + ': $ ' + number_format(tooltipItem.yLabel, 2);
+				}
+			}
+		}
+	  }
       });
     } else {
 	  //debugger;
