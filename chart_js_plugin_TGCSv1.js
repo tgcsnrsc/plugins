@@ -177,7 +177,7 @@
 			callbacks: {
 				label: function(tooltipItem, myChart){
 					var datasetLabel = myChart.datasets[tooltipItem.datasetIndex].label || '';
-					return datasetLabel + ': ' + newValue[0].ToolTipPrefix + number_format(newValue[0].ToolTipFormatNumber,tooltipItem.yLabel, 2);
+					return datasetLabel + ': ' + newValue[0].ToolTipPrefix + number_format(newValue[0].ToolTipFormatNumber,tooltipItem.yLabel, newValue[0].ToolTipFormatNumberDecimals);
 				}
 			}
 		}
