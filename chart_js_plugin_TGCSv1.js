@@ -131,7 +131,7 @@
                 beginAtZero: true,
 				//Add formatting to the Y-axis labels.
                 callback: function(value, index, values) {
-                   return '$ ' + number_format(newValue[0].yFormatNumber,value);
+                   return newValue[0].ToolTipPrefix + number_format(newValue[0].yFormatNumber,value);
 				}
 				//userCallback: function(value, index, values) {
 					// Convert the number to a string and split the string every 3 charaters from the end
