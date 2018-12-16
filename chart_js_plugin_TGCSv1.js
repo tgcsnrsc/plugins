@@ -93,8 +93,11 @@
                 display: newValue[0].yTicksDisplay,				  				  
                 fontSize: 12,
                 stepSize: newValue[0].yStepSize,
-                beginAtZero: true
+                beginAtZero: true,
 				//Add formatting to the Y-axis labels.
+                callback: function(value, index, values) {
+                   return '$ ' + number_format(value);
+				}
 				//userCallback: function(value, index, values) {
 					// Convert the number to a string and splite the string every 3 charaters from the end
 					//value = value.toString();
