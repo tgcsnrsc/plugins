@@ -28,6 +28,7 @@
 	function number_format(formatnumber, number, decimals, dec_point, thousands_sep) {
 	// *     example: number_format(1234.56, 2, ',', ' ');
 	// *     return: '1 234,56'
+	debugger;
 		if (formatnumber == null) {
 			return number;
 		}
@@ -183,7 +184,7 @@
 	  }
       });
     } else {
-	  debugger;
+	  //debugger;
       //  --- update data sets - https://www.chartjs.org/docs/latest/developers/updates.html //
 	    chartMap[currentSettings.id].data = 
 		{
