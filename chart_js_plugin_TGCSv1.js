@@ -93,7 +93,15 @@
                 display: newValue[0].yTicksDisplay,				  				  
                 fontSize: 12,
                 stepSize: newValue[0].yStepSize,
-                beginAtZero: true
+                beginAtZero: true,
+				userCallback: function(value, index, values) {
+					// Convert the number to a string and splite the string every 3 charaters from the end
+					value = value.toString();
+					value = value.split(/(?=(?:...)*$)/);
+					// Convert the array to a string and format the output
+					value = value.join('.');
+					return '$' + value;
+				}
               },
               gridLines: {
                   display: newValue[0].yScaleGridLinesDisplay,
