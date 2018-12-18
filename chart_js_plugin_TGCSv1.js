@@ -28,7 +28,7 @@
 	function number_format(formatnumber, number, decimals, dec_point, thousands_sep) {
 	// *     example: number_format(1234.56, 2, ',', ' ');
 	// *     return: '1 234,56'
-	debugger;
+	//debugger;
 		if (formatnumber == null) {
 			return number;
 		}
@@ -133,14 +133,6 @@
                 callback: function(value, index, values) {
                    return newValue[0].ToolTipPrefix + number_format(newValue[0].yFormatNumber,value);
 				}
-				//userCallback: function(value, index, values) {
-					// Convert the number to a string and split the string every 3 charaters from the end
-					//value = value.toString();
-					//value = value.split(/(?=(?:...)*$)/);
-					// Convert the array to a string and format the output
-					//value = value.join(',');
-					//return '$' + value;
-				//}
               },
               gridLines: {
                   display: newValue[0].yScaleGridLinesDisplay,
