@@ -41,7 +41,7 @@
       currentSettings = newSettings;
     }
 	 this.pluginService.register({
-	  beforeDraw: function (chart) {
+	  beforeDraw: function (chartMap[currentSettings.id]) {
 		if (chart.config.options.elements.center) {
 		  //Get ctx from string
 		  var ctx = chartMap[currentSettings.id];
