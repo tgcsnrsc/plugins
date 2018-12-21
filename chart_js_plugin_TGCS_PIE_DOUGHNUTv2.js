@@ -41,7 +41,7 @@
       currentSettings = newSettings;
     }
 	debugger;	
-	this.pluginService.register({
+	chart.pluginService.register({
 	  beforeDraw: function (chart) {
 		if (chart.config.options.elements.center) {
 		  //Get ctx from string
