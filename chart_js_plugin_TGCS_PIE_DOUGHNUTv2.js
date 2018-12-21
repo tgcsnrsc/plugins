@@ -40,32 +40,31 @@
     this.onSettingsChanged = function (newSettings) {
       currentSettings = newSettings;
     }
-	 this.pluginService.register({
+	debugger;	
+	this.pluginService.register({
 	  beforeDraw: function (chart) {
-		  
-		var myChart = chartMap[currentSettings.id];
-		if (myChart.config.options.elements.center) {
+		if (chart.config.options.elements.center) {
 		  //Get ctx from string
 		  var ctx = chartMap[currentSettings.id];
 
 		  //Get options from the center object in options
-		  var centerConfig = myChart.config.options.elements.center;
+		  var centerConfig = chart.config.options.elements.center;
 		  var fontStyle = centerConfig.fontStyle || 'Arial';
 		  var txt = centerConfig.text;
 		  var color = centerConfig.color || '#000';
 		  var sidePadding = centerConfig.sidePadding || 20;
-		  var sidePaddingCalculated = (sidePadding/100) * (myChart.innerRadius * 2)
+		  var sidePaddingCalculated = (sidePadding/100) * (chart.innerRadius * 2)
 		  //Start with a base font of 30px
 		  ctx.font = "30px " + fontStyle;
 
 		  //Get the width of the string and also the width of the element minus 10 to give it 5px side padding
 		  var stringWidth = ctx.measureText(txt).width;
-		  var elementWidth = (myChart.innerRadius * 2) - sidePaddingCalculated;
+		  var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
 
 		  // Find out how much the font can grow in width.
 		  var widthRatio = elementWidth / stringWidth;
 		  var newFontSize = Math.floor(30 * widthRatio);
-		  var elementHeight = (myChart.innerRadius * 2);
+		  var elementHeight = (chart.innerRadius * 2);
 
 		  // Pick a new font size so it will not be larger than the height of label.
 		  var fontSizeToUse = Math.min(newFontSize, elementHeight);
@@ -73,8 +72,8 @@
 		  //Set font settings to draw it correctly.
 		  ctx.textAlign = 'center';
 		  ctx.textBaseline = 'middle';
-		  var centerX = ((myChart.chartArea.left + myChart.chartArea.right) / 2);
-		  var centerY = ((myChart.chartArea.top + myChart.chartArea.bottom) / 2);
+		  var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+		  var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2);
 		  ctx.font = fontSizeToUse+"px " + fontStyle;
 		  ctx.fillStyle = color;
 
@@ -171,26 +170,24 @@
 	  }
       });
     } else {
-	  //debugger;
-      //  --- update data sets - https://www.chartjs.org/docs/latest/developers/updates.html //
-	    chartMap[currentSettings.id].data = 
-		{
-        labels: newValue[0].categories,
-        datasets: [
-          {
-          label: newValue[0].dataSetTitle,
-          fontColor: newValue[0].fontColor,
-          data: newValue[0].data,
-          borderColor: newValue[0].borderColor,
-          backgroundColor: newValue[0].backgroundColor,
-          fillColor: "white",
-          fill: false
-          }	
-        ]
-      }
-	  chartMap[currentSettings.id].update();
-    }
-    // rwv - end // 
+		  //  --- update data sets - https://www.chartjs.org/docs/latest/developers/updates.html //
+			chartMap[currentSettings.id].data = 
+			{
+			labels: newValue[0].categories,
+			datasets: [
+			  {
+			  label: newValue[0].dataSetTitle,
+			  fontColor: newValue[0].fontColor,
+			  data: newValue[0].data,
+			  borderColor: newValue[0].borderColor,
+			  backgroundColor: newValue[0].backgroundColor,
+			  fillColor: "white",
+			  fill: false
+			  }	
+			]
+		  }
+		  chartMap[currentSettings.id].update();
+		}
 	}
 			
     this.onDispose = function () {
