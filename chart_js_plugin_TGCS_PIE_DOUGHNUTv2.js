@@ -109,12 +109,6 @@
       options: {
         responsive: false,
 		  elements: {
-				  center: {
-				  text: 'Desktop',
-				  color: '#36A2EB', //Default black
-				  fontStyle: 'Helvetica', //Default Arial
-				  sidePadding: 15 //Default 20 (as a percentage)
-				},
 				line: {
 					tension: newValue[0].lineTensionCurvyness
 				}
