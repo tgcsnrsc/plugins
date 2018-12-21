@@ -44,7 +44,7 @@
 	  beforeDraw: function (chart) {
 		if (chart.config.options.elements.center) {
 		  //Get ctx from string
-		  var ctx = chart.chart.ctx;
+		  var ctx = chartMap[currentSettings.id];
 
 		  //Get options from the center object in options
 		  var centerConfig = chart.config.options.elements.center;
