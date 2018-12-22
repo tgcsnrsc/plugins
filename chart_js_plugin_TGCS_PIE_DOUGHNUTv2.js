@@ -15,15 +15,6 @@
  * * 11-19-2018		Shive		New for Pie or Doughnut w/text inside hole
  * * ============================================================================
  */
-	Chart.Chart.pluginService.register({
-		beforeDraw: function(chart) {
-			if (chart.config.centerText.display !== null &&
-				typeof chart.config.centerText.display !== 'undefined' &&
-				chart.config.centerText.display) {
-				drawTotals(chart);
-			}
-		},
-	});
   var chartMap = {};
   var chart_js_plugin_TGCS_PIE_DOUGHNUTv2 = function (settings) {
     var self = this;    
