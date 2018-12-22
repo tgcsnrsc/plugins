@@ -15,34 +15,6 @@
  * * 11-19-2018		Shive		New for Pie or Doughnut w/text inside hole
  * * ============================================================================
  */
-	Chart.Chart.pluginService.register({
-		beforeDraw: function(chart) {
-			if (chart.config.centerText.display !== null &&
-				typeof chart.config.centerText.display !== 'undefined' &&
-				chart.config.centerText.display) {
-				drawTotals(chart);
-			}
-		}
-	});
-	 
-	function drawTotals(chart) {
-	 
-		var width = chart.chart.width,
-		height = chart.chart.height,
-		ctx = chart.chart.ctx;
-	 
-		ctx.restore();
-		var fontSize = (height / 114).toFixed(2);
-		ctx.font = fontSize + "em sans-serif";
-		ctx.textBaseline = "middle";
-	 
-		var text = chart.config.centerText.text,
-		textX = Math.round((width - ctx.measureText(text).width) / 2),
-		textY = height / 2;
-	 
-		ctx.fillText(text, textX, textY);
-		ctx.save();}
-		
 		
   var chartMap = {};
   var chart_js_plugin_TGCS_PIE_DOUGHNUTv2 = function (settings) {
@@ -68,6 +40,21 @@
       currentSettings = newSettings;
     }
 	
+	function drawTotals(chart) {
+		var width = chart.chart.width,
+		height = chart.chart.height,
+		ctx = chart.chart.ctx;
+		ctx.restore();
+		var fontSize = (height / 114).toFixed(2);
+		ctx.font = fontSize + "em sans-serif";
+		ctx.textBaseline = "middle";
+		var text = chart.config.centerText.text,
+		textX = Math.round((width - ctx.measureText(text).width) / 2),
+		textY = height / 2;
+		ctx.fillText(text, textX, textY);
+		ctx.save();
+	}
+	
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
 		console.log ('Calcualted Value Changed');
@@ -76,6 +63,13 @@
 		var myChart = chartMap[currentSettings.id];
 		if(myChart == null) {
 		  chartMap[currentSettings.id] = new Chart(ctx, {
+			beforeDraw: function(chart) {
+				if (chart.config.centerText.display !== null &&
+				typeof chart.config.centerText.display !== 'undefined' &&
+				chart.config.centerText.display) {
+					drawTotals(chart);
+				}
+			},
 		  type: newValue[0].chartType,
 		  data: {
 			labels: newValue[0].categories,
@@ -185,6 +179,7 @@
     this.onSettingsChanged(settings);
   };
 
+  
   freeboard.loadWidgetPlugin({
     "type_name": "chart_js_plugin_TGCS_PIE_DOUGHNUTv2",
     "display_name": "chart_js_plugin_TGCS_PIE_DOUGHNUTv2",    
