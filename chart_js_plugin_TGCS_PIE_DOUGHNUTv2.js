@@ -40,6 +40,7 @@
     this.onSettingsChanged = function (newSettings) {
       currentSettings = newSettings;
     }
+	var chart = this;
 	debugger;	
 	chart.pluginService.register({
 	  beforeDraw: function (chart) {
