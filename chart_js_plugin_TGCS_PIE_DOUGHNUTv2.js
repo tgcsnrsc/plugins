@@ -15,6 +15,15 @@
  * * 11-19-2018		Shive		New for Pie or Doughnut w/text inside hole
  * * ============================================================================
  */
+	Chart.Chart.pluginService.register({
+		beforeDraw: function(chart) {
+			if (chart.config.centerText.display !== null &&
+				typeof chart.config.centerText.display !== 'undefined' &&
+				chart.config.centerText.display) {
+				drawTotals(chart);
+			}
+		},
+	});
   var chartMap = {};
   var chart_js_plugin_TGCS_PIE_DOUGHNUTv2 = function (settings) {
     var self = this;    
@@ -27,9 +36,7 @@
     //seems to be called once (or after settings change)
     this.render = function (element) {
       console.log('render');
-
       //add external css
-      
       //add the chart div to the dom
       var chartDiv = '<canvas id="'+currentSettings.id + '" width="'+currentSettings.chartWidth+'" height="'+currentSettings.chartHeight+'"></canvas>';
       console.log(chartDiv);
@@ -40,50 +47,6 @@
     this.onSettingsChanged = function (newSettings) {
       currentSettings = newSettings;
     }
-
-
-	var chart = this;
-	debugger;	
-	this.beforeDraw = function (chart) {
-		if (chart.config.options.elements.center) {
-		  //Get ctx from string
-		  var ctx = chartMap[currentSettings.id];
-
-		  //Get options from the center object in options
-		  var centerConfig = chart.config.options.elements.center;
-		  var fontStyle = centerConfig.fontStyle || 'Arial';
-		  var txt = centerConfig.text;
-		  var color = centerConfig.color || '#000';
-		  var sidePadding = centerConfig.sidePadding || 20;
-		  var sidePaddingCalculated = (sidePadding/100) * (chart.innerRadius * 2)
-		  //Start with a base font of 30px
-		  ctx.font = "30px " + fontStyle;
-
-		  //Get the width of the string and also the width of the element minus 10 to give it 5px side padding
-		  var stringWidth = ctx.measureText(txt).width;
-		  var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
-
-		  // Find out how much the font can grow in width.
-		  var widthRatio = elementWidth / stringWidth;
-		  var newFontSize = Math.floor(30 * widthRatio);
-		  var elementHeight = (chart.innerRadius * 2);
-
-		  // Pick a new font size so it will not be larger than the height of label.
-		  var fontSizeToUse = Math.min(newFontSize, elementHeight);
-
-		  //Set font settings to draw it correctly.
-		  ctx.textAlign = 'center';
-		  ctx.textBaseline = 'middle';
-		  var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
-		  var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2);
-		  ctx.font = fontSizeToUse+"px " + fontStyle;
-		  ctx.fillStyle = color;
-
-		  //Draw text in center
-		  ctx.fillText(txt, centerX, centerY);
-		}
-	};
-	
 	
     //seems to be called after render whenever a calculated value changes
     this.onCalculatedValueChanged = function (settingName, newValue) {
@@ -114,6 +77,12 @@
 			  elements: {
 					line: {
 						tension: newValue[0].lineTensionCurvyness
+					},
+					center: {
+						text: 'Desktop',
+						color: '#36A2EB', //Default black
+						fontStyle: 'Helvetica', //Default Arial
+						sidePadding: 15 //Default 20 (as a percentage)
 					}
 			},
 			title: {
