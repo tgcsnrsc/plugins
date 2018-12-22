@@ -22,7 +22,7 @@
 				chart.config.centerText.display) {
 				drawTotals(chart);
 			}
-		},
+		}
 	});
 	 
 	function drawTotals(chart) {
