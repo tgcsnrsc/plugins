@@ -181,6 +181,7 @@
 	
 	Chart.Chart.pluginService.register({
 		beforeDraw: function(chart) {
+			debugger;
 			if (chart.config.centerText.display !== null &&
 				typeof chart.config.centerText.display !== 'undefined' &&
 				chart.config.centerText.display) {
