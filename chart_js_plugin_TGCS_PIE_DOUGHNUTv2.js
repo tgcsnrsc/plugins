@@ -41,6 +41,7 @@
     }
 	
 	function drawTotals(chart) {
+		debugger;
 		var width = chart.chart.width,
 		height = chart.chart.height,
 		ctx = chart.chart.ctx;
@@ -64,6 +65,7 @@
 		if(myChart == null) {
 		  chartMap[currentSettings.id] = new Chart(ctx, {
 			beforeDraw: function(chart) {
+				debugger;
 				if (chart.config.centerText.display !== null &&
 				typeof chart.config.centerText.display !== 'undefined' &&
 				chart.config.centerText.display) {
