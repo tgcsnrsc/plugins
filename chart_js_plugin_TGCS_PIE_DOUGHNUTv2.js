@@ -178,7 +178,17 @@
 		  chartMap[currentSettings.id].update();
 		}
 	}
-			
+	
+	Chart.Chart.pluginService.register({
+		beforeDraw: function(chart) {
+			if (chart.config.centerText.display !== null &&
+				typeof chart.config.centerText.display !== 'undefined' &&
+				chart.config.centerText.display) {
+				drawTotals(chart);
+			}
+		}
+	});
+	
     this.onDispose = function () {
     }
 
