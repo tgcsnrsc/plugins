@@ -64,6 +64,10 @@
 		var myChart = chartMap[currentSettings.id];
 		if(myChart == null) {
 		  chartMap[currentSettings.id] = new Chart(ctx, {
+			plugins: [{
+					beforeDraw: function(chart, options) {
+				}
+			}],
 			beforeDraw: function(chart) {
 				debugger;
 				if (chart.config.centerText.display !== null &&
