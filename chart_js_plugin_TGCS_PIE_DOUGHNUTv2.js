@@ -95,6 +95,10 @@
 						tension: newValue[0].lineTensionCurvyness
 					}
 			},
+		    centerText: {
+				display: true,
+				text: "280"
+			},
 			title: {
 				display: true,
 				text: newValue[0].chartTitle,
