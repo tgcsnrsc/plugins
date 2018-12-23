@@ -179,7 +179,8 @@
 		}
 	}
 	
-	Chart.Chart.pluginService.register({
+	var myChart = chartMap[currentSettings.id];
+	myChart.Chart.pluginService.register({
 		beforeDraw: function(chart) {
 			debugger;
 			if (chart.config.centerText.display !== null &&
