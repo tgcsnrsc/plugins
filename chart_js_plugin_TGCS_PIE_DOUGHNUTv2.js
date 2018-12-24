@@ -179,10 +179,11 @@
 		}
 	}
 	
-	var myChart = chartMap[currentSettings.id];
-	myChart.Chart.pluginService.register({
+	var myChartx = chartMap[currentSettings.id];
+	debugger;
+	myChartx.Chart.pluginService.register({
 		beforeDraw: function(chart) {
-			debugger;
+
 			if (chart.config.centerText.display !== null &&
 				typeof chart.config.centerText.display !== 'undefined' &&
 				chart.config.centerText.display) {
