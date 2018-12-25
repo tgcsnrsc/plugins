@@ -181,7 +181,7 @@
 	
 	var myChartx = chartMap[currentSettings.id];
 	debugger;
-	myChartx.pluginService.register({
+	myChartx.plugins.register({
 		beforeDraw: function(chart) {
 
 			if (chart.config.centerText.display !== null &&
