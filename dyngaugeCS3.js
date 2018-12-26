@@ -41,7 +41,7 @@ window.dyngaugeCS3ID = 0;
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
                 showInnerShadow: false,
-                valueFontColor: "#d3d4d4",
+                valueFontColor: currentSettings.fontColor,
                 levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
             });
         }
@@ -98,6 +98,11 @@ window.dyngaugeCS3ID = 0;
                 type: "text"
             },
             {
+                name: "fontColor",
+                display_name: "Font Color",
+                type: "text",
+				default_value: "#d3d4d4"
+            },            {
                 name: "value",
                 display_name: "Value",
                 type: "calculated"
