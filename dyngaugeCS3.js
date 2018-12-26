@@ -20,12 +20,7 @@ window.dyngaugeCS3ID = 0;
         var self = this;
         thisdyngaugeCS3ID = "dyngaugeCS3-" + window.dyngaugeCS3ID++;
         var titleElement = $('<h2 class="section-title"></h2>');
-		
-		var gaugeDimensions = "; width:400px; height:320px";
-		
-		var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + gaugeDimensions + '"></div>');
-		
-        //var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + '"></div>');
+        var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + '"></div>');
 		
 		//var gaugeElement = '<canvas id="'+currentSettings.id + '" width="'+currentSettings.chartWidth+'" height="'+currentSettings.chartHeight+'"></canvas>';
 
@@ -52,9 +47,9 @@ window.dyngaugeCS3ID = 0;
 				shadowVerticalOffset: 10,
 				pointer: true,
 				pointerOptions: {
-					toplength: -15,
-					bottomlength: 10,
-					bottomwidth: 12,
+					toplength: 8,
+					bottomlength: -20,
+					bottomwidth: 6,
 					color: '#8e8e93',
 					stroke: '#ffffff',
 					stroke_width: 3,
