@@ -42,7 +42,7 @@ window.dyngaugeCS3ID = 0;
                 label: currentSettings.units,
 				shadowOpacity: 1,
 				shadowSize: 5,
-				shadowVerticalOffset: 10
+				shadowVerticalOffset: 10,
                 showInnerShadow: currentSettings.show_inner_shadow,
                 valueFontColor: currentSettings.fontColor,
                 levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
