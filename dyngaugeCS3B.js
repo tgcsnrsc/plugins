@@ -95,8 +95,7 @@ window.dyngaugeCS3BID = 0;
             {
                 name: "showInnerShadow",
                 display_name: "Show Inner Shadow",
-                type: "calculated",
-				default_value: false
+                type: "boolean"
             },			
             {
                 name: "units",
