@@ -81,8 +81,8 @@ window.dyngaugeIDv5 = 0;
         type_name: "dyngaugev5",
         display_name: "dynamicGaugeV5",
         "external_scripts" : [
-            "/freeboard-ui/plugins/thirdparty/raphael.2.1.0.min.js",
-            "/freeboard-ui/plugins/thirdparty/justgage.1.0.1.js"
+            "https://tgcsnrsc.github.io/plugins/raphael-2.1.4.min.js",
+            "https://tgcsnrsc.github.io/plugins/justgage.js"
         ],
         settings: [
             {
