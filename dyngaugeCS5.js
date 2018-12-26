@@ -4,6 +4,7 @@ window.dyngaugeIDv5 = 0;
 	//Cody Shive
 	//DynGauge v5
 	//2018.08.03
+	//updated 2018.12.26
     var dynamicGaugeV5Widget = function (settings) {
         var self = this;
         var thisdyngaugeIDv5 = "dyngaugeV5-" + window.dyngaugeIDv5++;
