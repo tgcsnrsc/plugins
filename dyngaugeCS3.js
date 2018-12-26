@@ -1,5 +1,21 @@
 window.dyngaugeCS3ID = 0; 
 (function() {    
+/* * ============================================================================
+ * * Copyright (c) 1999-2019 Toshiba Global Commerce Solutions, Inc.  
+ * * All Rights Reserved.
+ * *  
+ * * The source code for this program is not published or otherwise divested
+ * * of its trade secrets, irrespective of what has been deposited with the
+ * * U.S. Copyright Office.
+ * * ============================================================================
+ * * Author..............: Cody Shive
+ * * Date Written........:
+ * * Modifications
+ * * When			Who			Description
+ * * -------------	-----------	-------------------------------------------------
+ * * 11-19-2018		Shive		New.
+ * * ============================================================================
+ */
         var DynamicGaugeCS3Widget = function (settings) {
         var self = this;
         thisdyngaugeCS3ID = "dyngaugeCS3-" + window.dyngaugeCS3ID++;
@@ -64,12 +80,16 @@ window.dyngaugeCS3ID = 0;
         this.onSettingsChanged(settings);
     };
 
+    //"plugins/thirdparty/raphael.2.1.0.min.js",
+    //"plugins/thirdparty/justgage.1.0.1.js"
+
+	
     freeboard.loadWidgetPlugin({
         type_name: "dyngaugeCS3",
         display_name: "DynamicGaugeCS3",
         "external_scripts" : [
-            "plugins/thirdparty/raphael.2.1.0.min.js",
-            "plugins/thirdparty/justgage.1.0.1.js"
+            "https://tgcsnrsc.github.io/plugins/raphael.2.1.4.min.js",
+            "https://tgcsnrsc.github.io/plugins/justgage.js"
         ],
         settings: [
             {
