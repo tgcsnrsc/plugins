@@ -17,7 +17,7 @@
  */
 		
   var chartMap = {};
-  var chart_js_plugin_TGCS_PIE_DOUGHNUTv2 = function (settings) {
+  var chart_js_plugin_TGCS_PIE_DOUGHNUTv3 = function (settings) {
     var self = this;    
     var currentSettings = settings;
     var htmlElement;
@@ -204,8 +204,8 @@
 
   
   freeboard.loadWidgetPlugin({
-    "type_name": "chart_js_plugin_TGCS_PIE_DOUGHNUTv2",
-    "display_name": "chart_js_plugin_TGCS_PIE_DOUGHNUTv2",    
+    "type_name": "chart_js_plugin_TGCS_PIE_DOUGHNUTv3",
+    "display_name": "chart_js_plugin_TGCS_PIE_DOUGHNUTv3",    
     "fill_size": true,
     "external_scripts": [
       "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"
@@ -246,7 +246,7 @@
       }
     ],
     newInstance: function (settings, newInstanceCallback) {
-      newInstanceCallback(new chart_js_plugin_TGCS_PIE_DOUGHNUTv2(settings));
+      newInstanceCallback(new chart_js_plugin_TGCS_PIE_DOUGHNUTv3(settings));
     }
   });
 
