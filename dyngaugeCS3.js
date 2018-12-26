@@ -1,4 +1,4 @@
-window.dyngaugeCS3ID = 0; 
+//window.dyngaugeCS3ID = 0; 
 (function() {    
 /* * ============================================================================
  * * Copyright (c) 1999-2019 Toshiba Global Commerce Solutions, Inc.  
@@ -16,9 +16,12 @@ window.dyngaugeCS3ID = 0;
  * * 11-19-2018		Shive		New.
  * * ============================================================================
  */
-        var DynamicGaugeCS3Widget = function (settings) {
+    var DynamicGaugeCS3Widget = function (settings) {
         var self = this;
-        thisdyngaugeCS3ID = "dyngaugeCS3-" + window.dyngaugeCS3ID++;
+        var currentSettings = settings;
+		
+        //thisdyngaugeCS3ID = "dyngaugeCS3-" + window.dyngaugeCS3ID++;
+		thisdyngaugeCS3ID = currentSettings.id;
         var titleElement = $('<h2 class="section-title"></h2>');
         var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + '"></div>');
 		
@@ -28,8 +31,6 @@ window.dyngaugeCS3ID = 0;
 
         var gaugeObject;
         var rendered = false;
-
-        var currentSettings = settings;
 
         function createGauge() {
             if (!rendered) {
@@ -48,7 +49,7 @@ window.dyngaugeCS3ID = 0;
                 min: (_.isUndefined(currentSettings.min_value) ? 0 : currentSettings.min_value),
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
-				labelFontColor: '#000000',
+				labelFontColor: currentSettings.label_font_color,
 				shadowOpacity: 1,
 				shadowSize: 5,
 				shadowVerticalOffset: 10,
@@ -102,6 +103,12 @@ window.dyngaugeCS3ID = 0;
             "https://tgcsnrsc.github.io/plugins/justgage.js"
         ],
         settings: [
+			{
+				"name": "id",
+				"display_name": "id",
+				"default_value": "gauge1",
+				"description": "DOM element id of the gauge (must be unique for multiple gauges)"
+			},        		
             {
                 name: "title",
                 display_name: "Title",
@@ -112,6 +119,12 @@ window.dyngaugeCS3ID = 0;
                 display_name: "Font Color",
                 type: "text",
 				default_value: "#d3d4d4"
+            },            
+            {
+                name: "label_font_color",
+                display_name: "Label Font Color",
+                type: "text",
+				default_value: "#000000"
             },            
             {
 				name: "show_pointer",
