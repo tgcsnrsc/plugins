@@ -30,7 +30,8 @@ window.dyngaugeCS3BID = 0;
                 label: currentSettings.units,
                 showInnerShadow: false,
 				valueFontColor: currentSettings.fontcolor,
-                levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
+                //levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
+				levelColors: currentSettings.level_colors
             });
         }
 
@@ -108,6 +109,12 @@ window.dyngaugeCS3BID = 0;
                 display_name: "Maximum",
                 type: "text",
                 default_value: 100
+            },
+            {
+                name: "level_colors",
+                display_name: "Level colors",
+                type: "calculated",
+                default_value: "return ['#C03C3C','#de0700',  '#a9d70b', '#55BF3B']"
             }
         ],
         newInstance: function (settings, newInstanceCallback) {
