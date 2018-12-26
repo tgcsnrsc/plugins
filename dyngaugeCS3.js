@@ -48,6 +48,7 @@ window.dyngaugeCS3ID = 0;
                 min: (_.isUndefined(currentSettings.min_value) ? 0 : currentSettings.min_value),
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
+				labelFontColor: '#000000',
 				shadowOpacity: 1,
 				shadowSize: 5,
 				shadowVerticalOffset: 10,
@@ -65,7 +66,7 @@ window.dyngaugeCS3ID = 0;
         }
 
         this.onSettingsChanged = function (newSettings) {
-            if (newSettings.min_value != currentSettings.min_value || newSettings.max_value != currentSettings.max_value || newSettings.units != currentSettings.units) {
+            if (newSettings.min_value != currentSettings.min_value || newSettings.max_value != currentSettings.max_value || newSettings.units != currentSettings.units || newSettings.show_pointer != currentSettings.show_pointer) {
                 currentSettings = newSettings;
                 createGauge();
             }
