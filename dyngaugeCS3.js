@@ -43,6 +43,16 @@ window.dyngaugeCS3ID = 0;
 				shadowOpacity: 1,
 				shadowSize: 5,
 				shadowVerticalOffset: 10,
+				pointer: true,
+				pointerOptions: {
+					toplength: -15,
+					bottomlength: 10,
+					bottomwidth: 12,
+					color: '#8e8e93',
+					stroke: '#ffffff',
+					stroke_width: 3,
+					stroke_linecap: 'round'
+				},				
                 showInnerShadow: currentSettings.show_inner_shadow,
                 valueFontColor: currentSettings.fontColor,
                 levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
