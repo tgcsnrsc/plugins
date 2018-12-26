@@ -28,10 +28,9 @@ window.dyngaugeCS3BID = 0;
                 min: (_.isUndefined(currentSettings.min_value) ? 0 : currentSettings.min_value),
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
-                showInnerShadow: false,
+                showInnerShadow: currentSettings.show_inner_shadow,
 				valueFontColor: currentSettings.fontcolor,
-                //levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
-				levelColors: currentSettings.level_colors
+                levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
             });
         }
 
@@ -92,6 +91,11 @@ window.dyngaugeCS3BID = 0;
                 display_name: "Font Color",
                 type: "text",
 				default_value: "#d3d4d4"
+            },
+            {
+                name: "show_inner_shadow",
+                display_name: "Show Inner Shadow",
+                type: "boolean"
             },
             {
                 name: "units",
