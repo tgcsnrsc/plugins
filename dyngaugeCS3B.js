@@ -28,7 +28,7 @@ window.dyngaugeCS3BID = 0;
                 min: (_.isUndefined(currentSettings.min_value) ? 0 : currentSettings.min_value),
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
-                showInnerShadow: currentSettings.show_inner_shadow,
+                showInnerShadow: false,
 				valueFontColor: currentSettings.fontcolor,
                 levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
             });
