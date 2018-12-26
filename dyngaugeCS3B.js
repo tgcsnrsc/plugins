@@ -68,8 +68,8 @@ window.dyngaugeCS3BID = 0;
         type_name: "dyngaugeCS3B",
         display_name: "DynamicGaugeCS3B",
         "external_scripts" : [
-            "plugins/thirdparty/raphael.2.1.0.min.js",
-            "plugins/thirdparty/justgage.1.0.1.js"
+            "https://tgcsnrsc.github.io/plugins/raphael-2.1.4.min.js",
+            "https://tgcsnrsc.github.io/plugins/justgage.js"
         ],
         settings: [
             {
