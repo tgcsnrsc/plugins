@@ -30,7 +30,7 @@ window.dyngaugeCS3BID = 0;
                 label: currentSettings.units,
                 showInnerShadow: currentSettings.showInnerShadow,
 				valueFontColor: currentSettings.fontcolor,
-				levelColors: currentValues.level_colors,
+				levelColors: currentSettings.level_colors
             });
         }
 
