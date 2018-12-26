@@ -1,5 +1,9 @@
 window.dyngaugeCS3BID = 0; 
 (function() {    
+	//Toshiba Global Solutions, Inc.
+	//Cody Shive
+	//DynGauge v3B
+	//2018.12.26
         var DynamicGaugeCS3Widget = function (settings) {
         var self = this;
         thisdyngaugeCS3BID = "dyngaugeCS3B-" + window.dyngaugeCS3BID++;
@@ -24,9 +28,9 @@ window.dyngaugeCS3BID = 0;
                 min: (_.isUndefined(currentSettings.min_value) ? 0 : currentSettings.min_value),
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
-                showInnerShadow: false,
+                showInnerShadow: currentSettings.showInnerShadow,
 				valueFontColor: currentSettings.fontcolor,
-                levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
+				levelColors: currentValues.level_colors
             });
         }
 
@@ -89,6 +93,12 @@ window.dyngaugeCS3BID = 0;
 				default_value: "#d3d4d4"
             },
             {
+                name: "showInnerShadow",
+                display_name: "Show Inner Shadow",
+                type: "calculated",
+				default_value: false
+            },			
+            {
                 name: "units",
                 display_name: "Units",
                 type: "text"
@@ -104,7 +114,13 @@ window.dyngaugeCS3BID = 0;
                 display_name: "Maximum",
                 type: "text",
                 default_value: 100
-            }
+            },
+            {
+                name: "level_colors",
+                display_name: "Level colors",
+                type: "calculated",
+                default_value: "return ['#C03C3C','#de0700',  '#a9d70b', '#55BF3B']"
+            }			
         ],
         newInstance: function (settings, newInstanceCallback) {
             newInstanceCallback(new DynamicGaugeCS3Widget(settings));
