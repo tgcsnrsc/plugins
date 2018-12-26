@@ -24,6 +24,7 @@ window.dyngaugeCS3ID = 0;
 		
 		var defaultColors = ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00'];
 		var reversedColors = ['#00ff00','#ffff00','#ffa500','#ffa500','#ff0000'];
+		var useColors = defaultColors;
 
         var gaugeObject;
         var rendered = false;
@@ -34,6 +35,10 @@ window.dyngaugeCS3ID = 0;
             if (!rendered) {
                 return;
             }
+			
+			if (currentSettings.reverse_colors) {
+				useColors = reversedColors;
+			}
 
             gaugeElement.empty();
 
@@ -49,7 +54,7 @@ window.dyngaugeCS3ID = 0;
 				pointer: currentSettings.show_pointer,
                 showInnerShadow: false,
                 valueFontColor: currentSettings.fontColor,
-                levelColors: defaultColors
+                levelColors: useColors
             });
         }
 
@@ -110,6 +115,11 @@ window.dyngaugeCS3ID = 0;
             {
 				name: "show_pointer",
                 display_name: "Show Pointer",
+                type: "boolean"
+            },            
+            {
+				name: "reverse_colors",
+                display_name: "Use Reverse Colors",
                 type: "boolean"
             },            
 			{
