@@ -22,7 +22,8 @@ window.dyngaugeCS3ID = 0;
         var titleElement = $('<h2 class="section-title"></h2>');
         var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + '"></div>');
 		
-		//var gaugeElement = '<canvas id="'+currentSettings.id + '" width="'+currentSettings.chartWidth+'" height="'+currentSettings.chartHeight+'"></canvas>';
+		var defaultColors = "['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']";
+		var reversedColors = "['#00ff00','#ffff00','#ffa500','#ffa500','#ff0000']";
 
         var gaugeObject;
         var rendered = false;
@@ -48,7 +49,7 @@ window.dyngaugeCS3ID = 0;
 				pointer: currentSettings.show_pointer,
                 showInnerShadow: false,
                 valueFontColor: currentSettings.fontColor,
-                levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
+                levelColors: defaultColors
             });
         }
 
