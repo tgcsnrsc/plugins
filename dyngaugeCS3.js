@@ -20,7 +20,14 @@ window.dyngaugeCS3ID = 0;
         var self = this;
         thisdyngaugeCS3ID = "dyngaugeCS3-" + window.dyngaugeCS3ID++;
         var titleElement = $('<h2 class="section-title"></h2>');
-        var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + '"></div>');
+		
+		var gaugeDimensions = "; width:400px; height:320px";
+		
+		var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + gaugeDimensions + '"></div>');
+		
+        //var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + '"></div>');
+		
+		//var gaugeElement = '<canvas id="'+currentSettings.id + '" width="'+currentSettings.chartWidth+'" height="'+currentSettings.chartHeight+'"></canvas>';
 
         var gaugeObject;
         var rendered = false;
@@ -93,10 +100,7 @@ window.dyngaugeCS3ID = 0;
         this.onSettingsChanged(settings);
     };
 
-    //"plugins/thirdparty/raphael.2.1.0.min.js",
-    //"plugins/thirdparty/justgage.1.0.1.js"
 
-	
     freeboard.loadWidgetPlugin({
         type_name: "dyngaugeCS3",
         display_name: "DynamicGaugeCS3",
