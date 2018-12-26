@@ -28,9 +28,9 @@ window.dyngaugeCS3BID = 0;
                 min: (_.isUndefined(currentSettings.min_value) ? 0 : currentSettings.min_value),
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
-                showInnerShadow: currentSettings.showInnerShadow,
+                showInnerShadow: false,
 				valueFontColor: currentSettings.fontcolor,
-				levelColors: currentSettings.level_colors
+                levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
             });
         }
 
@@ -93,11 +93,6 @@ window.dyngaugeCS3BID = 0;
 				default_value: "#d3d4d4"
             },
             {
-                name: "showInnerShadow",
-                display_name: "Show Inner Shadow",
-                type: "boolean"
-            },			
-            {
                 name: "units",
                 display_name: "Units",
                 type: "text"
@@ -113,13 +108,7 @@ window.dyngaugeCS3BID = 0;
                 display_name: "Maximum",
                 type: "text",
                 default_value: 100
-            },
-            {
-                name: "level_colors",
-                display_name: "Level colors",
-                type: "calculated",
-                default_value: "return ['#C03C3C','#de0700',  '#a9d70b', '#55BF3B']"
-            }			
+            }
         ],
         newInstance: function (settings, newInstanceCallback) {
             newInstanceCallback(new DynamicGaugeCS3Widget(settings));
