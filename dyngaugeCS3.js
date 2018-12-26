@@ -46,7 +46,6 @@ window.dyngaugeCS3ID = 0;
 				shadowSize: 5,
 				shadowVerticalOffset: 10,
 				pointer: true,
-				       pointerOptions: {
 				pointerOptions: {
 					toplength: 8,
 					bottomlength: -20,
