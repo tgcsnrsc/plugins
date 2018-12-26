@@ -45,14 +45,8 @@ window.dyngaugeCS3ID = 0;
 				shadowOpacity: 1,
 				shadowSize: 5,
 				shadowVerticalOffset: 10,
-				pointer: true,
-				pointerOptions: {
-					toplength: 8,
-					bottomlength: -20,
-					bottomwidth: 6,
-					color: '#8e8e93'
-				},				
-                showInnerShadow: currentSettings.show_inner_shadow,
+				pointer: currentSettings.show_pointer,
+                showInnerShadow: false,
                 valueFontColor: currentSettings.fontColor,
                 levelColors: ['#ff0000', '#ffa500','#ffa500','#ffff00', '#00ff00']
             });
@@ -113,8 +107,8 @@ window.dyngaugeCS3ID = 0;
 				default_value: "#d3d4d4"
             },            
             {
-                name: "show_inner_shadow",
-                display_name: "Show Inner Shadow",
+				name: "show_pointer",
+                display_name: "Show Pointer",
                 type: "boolean"
             },            
 			{
