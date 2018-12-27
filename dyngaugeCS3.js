@@ -26,10 +26,11 @@
         var gaugeElement = $('<div id="' + thisdyngaugeCS3ID + '"></div>');
 		//#ff0000 -- Red
 		//#ffa500 -- Orange (50%)
+		//#ff4500 -- OrangeRed
 		//#ffff00 -- Yellow (50%)
 		//#00ff00 -- Lime
-		var defaultColors = ['#ff0000', '#ffa500','#ffff00', '#00ff00'];
-		var reversedColors = ['#00ff00','#ffff00','#ffa500','#ff0000'];
+		var defaultColors = ['#ff0000', '#ff4500', '#ffa500','#ffff00', '#00ff00'];
+		var reversedColors = ['#00ff00','#ffff00','#ffa500','#ff4500','#ff0000'];
 		var useColors = defaultColors;
 
         var gaugeObject;
