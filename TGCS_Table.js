@@ -115,9 +115,9 @@
     freeboard.loadWidgetPlugin({
         type_name: "list",
         display_name: "TGCS_Table",
-//         external_scripts : [
-//          "./table-widget/jquery.tablescroll.js"
-//          ],
+         external_scripts : [
+          "./table-widget/jquery.tablescroll.js"
+          ],
         settings: [
             {
                 name: "title",
