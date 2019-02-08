@@ -54,6 +54,9 @@
                 max: (_.isUndefined(currentSettings.max_value) ? 0 : currentSettings.max_value),
                 label: currentSettings.units,
 				labelFontColor: currentSettings.label_font_color,
+				shadowOpacity: currentSettings.shadow_Opacity,
+				shadowSize: currentSettings.shadow_Size,
+				shadowVerticalOffset: currentSettings.shadow_Veritical_Offset,
 //				shadowOpacity: 1,
 //				shadowSize: 5,
 //				shadowVerticalOffset: 10,
@@ -140,6 +143,24 @@
                 display_name: "Use Reverse Colors",
                 type: "boolean"
             },            
+            {
+                name: "shadow_Opacity",
+                display_name: "Shadow Opacity",
+                type: "text",
+                default_value: 1
+            },
+            {
+                name: "shadow_Size",
+                display_name: "Shadow Size",
+                type: "text",
+                default_value: 5
+            },
+            {
+                name: "shadow_Veritical_Offset",
+                display_name: "Shadow Vertical Offset",
+                type: "text",
+                default_value: 10
+            },
 			{
                 name: "value",
                 display_name: "Value",
